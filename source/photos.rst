@@ -1,0 +1,6 @@
+.. _photos:
+
+Photos
+======
+
+Test
