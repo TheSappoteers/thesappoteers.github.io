@@ -3,27 +3,12 @@
 Contact
 =======
 
-For any questions or if you require further information, please don't hesitate to reach out.
+The best way to contact us is to stand at the bar at The SCR on a Friday evening at around 06:00 pm and shout one of the phrases below. Almost immediately one member of Sappo club will make themselves known:
 
-Email
------
+- "Understanding the weather in the tropics is easy. It gets hot, clouds build and it rains. Simple as that."
 
-- **Workshop Coordinators:**
+- "Why do we need to have different names for different clouds? Surely they're all the same."
 
-  - Kayla White `(kaylaw@utexas.edu) <mailto:kaylaw@utexas.edu>`_
-  - Marianne Lund `(m.t.lund@cicero.oslo.no) <mailto:m.t.lund@cicero.oslo.no>`_
-  - Bjørn Samset `(b.h.samset@cicero.oslo.no) <mailto:b.h.samset@cicero.oslo.no>`_
+- "I wish I knew a joke about a duck in a pharmacy."
 
-- **Website and GitHub Coordinator:**
-
-  - Ankit Bhandekar `(ankit.r.bhandekar@pgr.reading.ac.uk) <mailto:ankit.r.bhandekar@pgr.reading.ac.uk>`_
-
-Slack Channel
--------------
-
-Join the conversation on our `HETCLIF ECRs Slack Channel <https://hetclif.slack.com/archives/C068H4XAQS3>`_.
-
-Ask Questions
--------------
-
-Share your ideas, ask questions, or start discussions directly on our `HETCLIF-ECRs GitHub Discussions page <https://github.com/orgs/HETCLIF-ECRs/discussions>`_.
+- "I base all my expectations for upcoming weather events on Daily Express headlines."

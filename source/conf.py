@@ -51,7 +51,7 @@ html_theme_options = {
         "navbar_persistent": [],  # Make sure the search button is not included here
     "icon_links": [
         {
-            "name": "WhatsApp",
+            "name": "Join the conversation on WhatsApp",
             "url": "https://chat.whatsapp.com/CgYkOZiabKv4fy38PAJTJp",
             "icon": "fa-brands fa-whatsapp",
         },
