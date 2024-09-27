@@ -21,3 +21,6 @@ FrisBeer Leaderboard
    * - 🥉 Mark Prosser
      -  193
      - ?
+   * - 🦆 Charlie Suitters
+     -  DNF
+     - ?
