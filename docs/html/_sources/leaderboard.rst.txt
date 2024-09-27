@@ -11,13 +11,13 @@ FrisBeer Leaderboard
    
    * - Name
      - Time (seconds)
-     - Drink (1.5 pints)
+     - Drink (1.5 pints adjusted)
    * - 🥇 Brian Lo
      - 72
      - ?
-   * - 🥈 Mark Prosser
-     - 193
+   * - 🥈 Hannah Croad
+     - 176
      - ?
-   * - 🥉
-     - 
-     - 
+   * - 🥉 Mark Prosser
+     -  193
+     - ?
