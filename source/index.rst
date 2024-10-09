@@ -1,11 +1,19 @@
-=============================================
-The Sappoteers welcome you to the Sappo Club!
-=============================================
+.. raw:: html
 
-.. About
-.. -----
+   <h1 style="text-align: center;">The Sappoteers welcome you to the Sappo Club!</h1>
 
-.. **The Sappoteers welcome you to the Sappo Club!** 
+.. image:: _static/hero.jpeg
+   :alt: Hero Banner
+   :class: hero-banner
+   :align: center
+   :width: 900px
+
+.. raw:: html
+
+   <br><br>  <!-- Adds some space using HTML line breaks -->
+
+What is Sappo?
+--------------
 
 A weekly social event on Friday evenings for CliMet people at the University of Reading and their friends. 
 
@@ -16,16 +24,22 @@ The starting point for Sappo is almost always the SCR (Senior Common Room @ Park
 Food, drinks and lively entertainment inevitably follow at the SCR and at other venues that are usually attended afterwards. After the SCR, well anything can happen.
 
 .. note::
-  Subscribers to the Met-Social mailing list receive weekly email reminders and flyers advertising the club and signalling the start of the weekend!
+  Subscribers to the Met-Social mailing list (MET-SOCIAL@MAILLISTS.READING.AC.UK) receive weekly email reminders and flyers advertising the club and signalling the start of the weekend!
 
-Why Sappo?
-----------
+Why is Sappo?
+-------------
 
 Sappoing isn't just a club, it's a whole way of life. The Sappoteers say that everything they have learnt in their existence, they have learnt during the Sappo Club!
 
 Although Sappo Club is very informal affair, getting academics to all move in one direction is somewhat akin to herding cats so some organisation is required and someone at least needs to pretend to be in charge. This person is known as The Sappoteer. 
 
 A Sappoteer's role can be broken down into two parts: At some point on a Friday afternoon the duty scientist will send round an e-mail to the department reminding everybody about the club hopefully encouraging people to come along and including a flyer with information about the night ahead. The second task is the to cast any required deciding votes as to destinations visited in the evening.
+
+
+Who is Sappo?
+-------------
+
+Sappo Club was started by Mathew "Sappo" Sapiano who was a PhD student at the department from 2001 - 2005. In the banner above you can see Sappo with his disciples from the renowned artwork "The Forecast Sappo", currently located at Harry Pitt 181. It depicts the first Sappo that Sappo shared with his disciples before his weather forecast, capturing the moment when the typical British weather betrayed him.
 
 
 .. toctree::

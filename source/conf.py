@@ -59,6 +59,8 @@ html_theme_options = {
     ],
 }
 
+html_show_sphinx = False
+
 # -- Option for favicons -------------------------------------------------------
 favicons = [
     "favicon.png"

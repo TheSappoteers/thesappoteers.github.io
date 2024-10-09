@@ -9,6 +9,6 @@ The best way to contact us is to stand at the bar at The SCR on a Friday evening
 
 - "Why do we need to have different names for different clouds? Surely they're all the same."
 
-- "I wish I knew a joke about a duck in a pharmacy."
+- "I don't get it. Why can't we just use the weather app instead of all this complex modeling?"
 
 - "I base all my expectations for upcoming weather events on Daily Express headlines."
