@@ -10,6 +10,14 @@
 
 .. raw:: html
 
+   <!-- Museum-style credit with "2024 AD", customized hyperlink color, and humorous medium on a separate line, with title bolded -->
+   <div style="width: 900px; margin: auto; text-align: right; font-size: 0.9em; font-style: italic; color: var(--bd-text-color);">
+     <strong>"The Forecast Sappo"</strong> by <a href="https://github.com/bewithankit" style="color: #FF4500; text-decoration: none;">@bewithankit</a>, 2024 AD <br>
+     Pixels on Pixels
+   </div>
+
+.. raw:: html
+
    <br><br>  <!-- Adds some space using HTML line breaks -->
 
 What is Sappo?
