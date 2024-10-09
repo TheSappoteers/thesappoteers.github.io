@@ -15,7 +15,7 @@
 What is Sappo?
 --------------
 
-A weekly social event on Friday evenings for CliMet people at the University of Reading and their friends. 
+A weekly social event on Friday evenings for CLI-MET people at the University of Reading and their friends. 
 
 Sappo Club outings are a very informal and loosely organised way to unwind at the end of the week, catch up with old friends and get to know other department members. 
 

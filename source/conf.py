@@ -61,6 +61,11 @@ html_theme_options = {
 
 html_show_sphinx = False
 
+# Set light mode as default in html_context
+html_context = {
+    "default_mode": "light",  # Set light mode as the default
+}
+
 # -- Option for favicons -------------------------------------------------------
 favicons = [
     "favicon.png"
