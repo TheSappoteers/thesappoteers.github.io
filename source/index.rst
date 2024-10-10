@@ -33,7 +33,7 @@ Sappo Club outings are a very informal and loosely organised way to unwind at th
 Where is Sappo?
 ---------------
 
-The starting point for Sappo is almost always the SCR (Senior Common Room @ `Park House <https://maps.app.goo.gl/R4gxBn8cnirAws5z8/>`_) as it is the closest watering hole to the buildings of the department with people starting to wander over at around 5:30 pm. 
+The starting point for Sappo is almost always the SCR (Senior Common Room @ Park House) as it is the closest watering hole to the buildings of the department with people starting to wander over at around 5:30 pm. 
 
 Food, drinks and lively entertainment inevitably follow at the SCR and at other venues that are usually attended afterwards. After the SCR, well anything can happen.
 

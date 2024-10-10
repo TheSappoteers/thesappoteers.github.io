@@ -4,7 +4,7 @@ FrisBeer Leaderboard
 ====================
 
 .. warning::
-  These were the timings that I took which were already shared on the chat. For any conflicts please challenge the concerned defendant.
+  These were the timings that I took which were already shared on the chat. For any conflicts please challenge the concerned defendant!
 
 .. list-table:: 
    :header-rows: 1
@@ -27,6 +27,6 @@ FrisBeer Leaderboard
      -  DNF
      - ?
 
-.. important::
-  Upcoming Viva dates: 
-  Isabel Smith → November 8th, 2024 (AM)
+.. admonition:: Upcoming Viva Dates
+
+   Isabel Smith: November 8th, 2024 (AM)
