@@ -25,14 +25,17 @@ What is Sappo?
 
 A weekly social event on Friday evenings for CLI-MET people at the University of Reading and their friends. 
 
-Sappo Club outings are a very informal and loosely organised way to unwind at the end of the week, catch up with old friends and get to know other department members. 
-
-The starting point for Sappo is almost always the SCR (Senior Common Room @ Park House) as it is the closest watering hole to the buildings of the department with people starting to wander over at around 5:30 pm. 
-
-Food, drinks and lively entertainment inevitably follow at the SCR and at other venues that are usually attended afterwards. After the SCR, well anything can happen.
+Sappo Club outings are a very informal and loosely organised way to unwind at the end of the week, catch up with old friends and get to know other department members.
 
 .. note::
-  Subscribers to the Met-Social mailing list (MET-SOCIAL@MAILLISTS.READING.AC.UK) receive weekly email reminders and flyers advertising the club and signalling the start of the weekend!
+  Subscribers to the Met-Social mailing list (MET-SOCIAL@MAILLISTS.READING.AC.UK) receive weekly email reminders and flyers advertising the club and signalling the start of the weekend! 
+
+Where is Sappo?
+---------------
+
+The starting point for Sappo is almost always the SCR (Senior Common Room @ `Park House <https://maps.app.goo.gl/R4gxBn8cnirAws5z8/>`_) as it is the closest watering hole to the buildings of the department with people starting to wander over at around 5:30 pm. 
+
+Food, drinks and lively entertainment inevitably follow at the SCR and at other venues that are usually attended afterwards. After the SCR, well anything can happen.
 
 Why is Sappo?
 -------------
