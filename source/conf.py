@@ -37,13 +37,13 @@ html_sidebars = {
 }
 
 html_title = "The Sappoteers"
-html_logo = '_static/logo.png'
+html_logo = '_static/logo.svg'
 html_baseurl = 'https://sappoteers.github.io/'
 html_show_sourcelink = False
 html_theme_options = {
     "logo": {
         "text": "The Sappoteers",
-        "image_dark": "_static/logo.png",  # assuming your logo file is named logo.png and located in the _static directory
+        "image_dark": "_static/logo.svg",  # assuming your logo file is named logo.png and located in the _static directory
         "alt_text": "The Sappoteers",
     },
     "footer_end": ["combined_footer.html"],
@@ -68,10 +68,11 @@ html_context = {
 
 # -- Option for favicons -------------------------------------------------------
 favicons = [
-    "favicon.png"
+    "logo.svg"
 ]
 
 def setup(app):
+    app.add_css_file('custom.css')
     app.add_css_file('basic.css')
     # Make sure to include the Font Awesome CSS for icons if it's not already included
     app.add_css_file('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
