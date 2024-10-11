@@ -12,7 +12,7 @@
 
    <!-- Museum-style credit -->
    <div style="width: 900px; margin: auto; text-align: right; font-size: 0.9em; font-style: italic; color: var(--bd-text-color);">
-     <strong>"The Forecast Sappo"</strong> by <a href="https://github.com/bewithankit" style="color: #FF4500; text-decoration: none;">@bewithankit</a>, 2024 AD <br>
+     <strong>"The <s>Last</s> Forecast Sappo"</strong> by <a href="https://github.com/bewithankit" style="color: #FF4500; text-decoration: none;">@bewithankit</a>, 2024 AD <br>
      Pixels on Pixels
    </div>
 
