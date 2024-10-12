@@ -1,6 +1,6 @@
 .. raw:: html
 
-   <h1 style="text-align: center;">The Sappoteers welcome you to the Sappo Club!</h1>
+   <h1 style="text-align: center;">The SAPPOteers welcome you to the Sappo Club!</h1>
 
 .. image:: _static/hero.jpeg
    :alt: Hero Banner
@@ -45,11 +45,11 @@ Food, drinks and lively entertainment inevitably follow at the SCR and at other 
 Why is Sappo?
 -------------
 
-Sappoing isn't just a club, it's a whole way of life. The Sappoteers say that everything they have learnt in their existence, they have learnt during the Sappo Club!
+Sappoing isn't just a club, it's a whole way of life. The SAPPOteers say that everything they have learnt in their existence, they have learnt during the Sappo Club!
 
-Although Sappo Club is very informal affair, getting academics to all move in one direction is somewhat akin to herding cats so some organisation is required and someone at least needs to pretend to be in charge. This person is known as The Sappoteer. 
+Although Sappo Club is very informal affair, getting academics to all move in one direction is somewhat akin to herding cats so some organisation is required and someone at least needs to pretend to be in charge. This person is known as The SAPPOteer. 
 
-A Sappoteer's role can be broken down into two parts: At some point on a Friday afternoon the duty scientist will send round an e-mail to the department reminding everybody about the club hopefully encouraging people to come along and including a flyer with information about the night ahead. The second task is the to cast any required deciding votes as to destinations visited in the evening.
+A SAPPOteer's role can be broken down into two parts: At some point on a Friday afternoon the duty scientist will send round an e-mail to the department reminding everybody about the club hopefully encouraging people to come along and including a flyer with information about the night ahead. The second task is the to cast any required deciding votes as to destinations visited in the evening.
 
 
 Who is Sappo?

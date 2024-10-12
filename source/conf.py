@@ -5,8 +5,8 @@ import pydata_sphinx_theme
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'The Sappoteers'
-copyright = '2024, The Sappoteers'
+project = 'The SAPPOteers'
+copyright = '2024, The SAPPOteers'
 author = 'Ankit Bhandekar'
 
 # -- General configuration ---------------------------------------------------
@@ -36,15 +36,15 @@ html_sidebars = {
   "**": []
 }
 
-html_title = "The Sappoteers"
+html_title = "The SAPPOteers"
 html_logo = '_static/logo.svg'
-html_baseurl = 'https://sappoteers.github.io/'
+html_baseurl = 'https://SAPPOteers.github.io/'
 html_show_sourcelink = False
 html_theme_options = {
     "logo": {
-        "text": "The Sappoteers",
+        "text": "The SAPPOteers",
         "image_dark": "_static/logo.svg",  # assuming your logo file is named logo.png and located in the _static directory
-        "alt_text": "The Sappoteers",
+        "alt_text": "The SAPPOteers",
     },
     "footer_end": ["combined_footer.html"],
     "navbar_end": ["theme-switcher", "navbar-icon-links"],
