@@ -29,4 +29,5 @@ FrisBeer Leaderboard
 
 .. admonition:: Upcoming Viva Dates
 
-   Isabel Smith: November 8th, 2024 (AM)
+   - Isabel Smith: November 8th, 2024 (AM)
+   - Natalie Ratcliffe: December 9th, 2024
