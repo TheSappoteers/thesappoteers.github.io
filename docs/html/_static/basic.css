@@ -1,0 +1,6 @@
+/* Center text in list-table */
+.centered-table td, 
+.centered-table th {
+    text-align: center;
+    vertical-align: middle;
+}

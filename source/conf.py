@@ -38,7 +38,7 @@ html_sidebars = {
 
 html_title = "The SAPPOteers"
 html_logo = '_static/logo.svg'
-html_baseurl = 'https://SAPPOteers.github.io/'
+html_baseurl = 'https://thesappoteers.github.io/'
 html_show_sourcelink = False
 html_theme_options = {
     "logo": {
