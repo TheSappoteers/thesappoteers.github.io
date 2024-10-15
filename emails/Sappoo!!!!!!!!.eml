@@ -1,27 +1,27 @@
-Received: from CWXP265MB5624.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:158::13)
- by CWLP265MB2628.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 7 Jun 2024
- 12:13:48 +0000
+Received: from LO4P265MB6999.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:34c::12)
+ by CWLP265MB4347.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 7 Jun 2024
+ 12:13:47 +0000
 ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
- b=hyVLLzeUlJZX1ZsKr+xaEDw1srOCN5gaTSs3Xo7FfKD0tB1NjXAR34WBTnICuOf8+wSsyQ+M7iomfLTm+fzPoEz1z/5www9aHvWaGHc6m+0POCPCzVc7rT8ueCPbpyNo82+mJRvabbO9k1rsNQ0O4waXvnitjh2i6DveDLW6OABcpJau/gJGizpgSVNPPBCQHOA1dTXAAaXFk45X/lTeScKj/GKT2HDebMozKXMjQCMsSL4sEanTyqcVecHzH8Xf7njxh2XIgtQFp8y9lWhdeERUt7CKaNr8Yd8pRjJB7BsgdALFrQuA2iQgS/wAZ3NB9LDuX+wD3WOXjkwVUpO45A==
+ b=WOW1pRbBqXYcvdBlnmhZJzedpNGG71NgvNMV4xjAwUbFDAeN/v1dnnsX+nXzHq9N0AL5Yd7uJsH6ui552WuvtdlJcEt3kgHgzqYTpJPhDad9o0yOQSR6iHvWhgDoAZtqATpnwl1Ft5UsRTBkCglu12w8FosJjbi78xBgbUBBJg4cG8gaoUHjwBVUEmoru/B2TmZjsMkjWMRR8/RRcx5dgo/ubITbUHZDFPRXzDJiyhyhoRS5aIcdHLY5DHlPzr7Y9vkc9LV9aRAAjHCqRGpzb6jik6MpmUJ1rfahUOjCN2c+0n34FhjXoQqmiCnCDgjjzIEucD9Hdx2mj4Fi8Yb0RQ==
 ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
  bh=ryqXe3AsxCFdfHy0uBQjgZ62uWxuQnUuACLIlw1gqAg=;
  b=cDvsE0/qCCOYlyBhzHVH8kAf9D/WCpHEG21fuZfQJCcmwBrFFiwhEh2nkMkcFy7NQI113b6Iqd/9Tl8llmtPv2MNVJFTUrdhkovsueWDAyt7jrcNb0Vy71KrMhf7I1dmrWT93toZuPJXcDjreHo62fVD9kYRB9Jp00HszYvD15PxDoW9vI5XF04h5f0YOVCyKQvh9nPpheB3K0/ihfQ6Yx9aiPeHOg2yyczQmKhBBXVIekrOgFBfL1CuSOOqJrcJQ7E8mSPzoqTdsp056urp/sUND9so4Q/dvPLGqyxi9UcT7ooF0w8kecC/l86HjqTUeOhOOvTACbKT9m9VFGbnQg==
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
- 52.156.253.32) smtp.rcpttodomain=pgr.reading.ac.uk
+ 52.156.253.32) smtp.rcpttodomain=student.reading.ac.uk
  smtp.mailfrom=maillists.reading.ac.uk; dmarc=pass (p=none sp=none pct=100)
  action=none header.from=pgr.reading.ac.uk; dkim=pass (signature was verified)
  header.d=maillists.reading.ac.uk; arc=fail (47)
-Received: from AM8P190CA0026.EURP190.PROD.OUTLOOK.COM (2603:10a6:20b:219::31)
- by CWXP265MB5624.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:158::13) with
- Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7633.34; Fri, 7 Jun
- 2024 12:13:45 +0000
-Received: from AM4PEPF00027A66.eurprd04.prod.outlook.com
- (2603:10a6:20b:219:cafe::bc) by AM8P190CA0026.outlook.office365.com
- (2603:10a6:20b:219::31) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7656.21 via Frontend
+Received: from DUZPR01CA0338.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:4b8::8) by LO4P265MB6999.GBRP265.PROD.OUTLOOK.COM
+ (2603:10a6:600:34c::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7633.33; Fri, 7 Jun
+ 2024 12:13:44 +0000
+Received: from DB1PEPF000509EF.eurprd03.prod.outlook.com
+ (2603:10a6:10:4b8:cafe::64) by DUZPR01CA0338.outlook.office365.com
+ (2603:10a6:10:4b8::8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7656.20 via Frontend
  Transport; Fri, 7 Jun 2024 12:13:44 +0000
 Authentication-Results: spf=pass (sender IP is 52.156.253.32)
  smtp.mailfrom=MAILLISTS.READING.AC.UK; dkim=pass (signature was verified)
@@ -32,12 +32,12 @@ Received-SPF: Pass (protection.outlook.com: domain of MAILLISTS.READING.AC.UK
  receiver=protection.outlook.com; client-ip=52.156.253.32;
  helo=sirius.ease.lsoft.se; pr=C
 Received: from sirius.ease.lsoft.se (52.156.253.32) by
- AM4PEPF00027A66.mail.protection.outlook.com (10.167.16.91) with Microsoft
+ DB1PEPF000509EF.mail.protection.outlook.com (10.167.242.73) with Microsoft
  SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7633.15
- via Frontend Transport; Fri, 7 Jun 2024 12:13:44 +0000
+ via Frontend Transport; Fri, 7 Jun 2024 12:13:42 +0000
 Received: from CASTOR (castor.ease.lsoft.se [52.156.253.36])
-	by sirius.ease.lsoft.se (Postfix) with SMTP id 6BEAF20063BB
-	for <ankit.r.bhandekar@PGR.READING.AC.UK>; Fri,  7 Jun 2024 12:13:42 +0000 (UTC)
+	by sirius.ease.lsoft.se (Postfix) with SMTP id 414F82005DCD;
+	Fri,  7 Jun 2024 12:13:42 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; d=MAILLISTS.READING.AC.UK; s=DEFAULT; c=relaxed/relaxed; bh=ryqXe3AsxCFdfHy0uBQjgZ62uWxuQnUuACLIlw1gqAg=; i=@MAILLISTS.READING.AC.UK;
  h=Approved-By:ARC-Seal:ARC-Message-Signature:ARC-Authentication-Results:Thread-Topic:Thread-Index:Accept-Language:Content-Language:Content-Type:MIME-Version:Message-ID:Date:Reply-To:Sender:From:Subject:To:List-Help:List-Unsubscribe:List-Subscribe:List-Owner:List-Archive;
  b=bDpy+MVx9+9FrtB7nxdgVgD1H0H2g4sz0CK1rZptrgfwxOqBvlRNbQ/jJtByQEgbranE0Ls7x0TNKeL8YTuE/qyeMnLxVLw//JR7bYdi+Y8e/78BiTO/9mrWwYEdbAG/0/XiEzJRJlCtl0C/f4xXJZVKg1enpJ64SfMannEYBSs=
@@ -78,8 +78,8 @@ Content-Language: en-US
 X-MS-Has-Attach: yes
 X-MS-TNEF-Correlator:
 x-ms-traffictypediagnostic:
- LO6P265MB6047:EE_|CWXP265MB3432:EE_|AM4PEPF00027A66:EE_|CWXP265MB5624:EE_|CWLP265MB2628:EE_
-X-MS-Office365-Filtering-Correlation-Id: fcefb198-7fea-4048-85a3-08dc86eb4705
+ LO6P265MB6047:EE_|CWXP265MB3432:EE_|DB1PEPF000509EF:EE_|LO4P265MB6999:EE_|CWLP265MB4347:EE_
+X-MS-Office365-Filtering-Correlation-Id: 556cffb6-c632-4cd9-0502-08dc86eb45f3
 x-ms-exchange-senderadcheck: 1
 x-ms-exchange-antispam-relay: 0
 X-Microsoft-Antispam-Untrusted:
@@ -127,70 +127,69 @@ List-Unsubscribe: <mailto:MET-SOCIAL-unsubscribe-request@MAILLISTS.READING.AC.UK
 List-Subscribe: <mailto:MET-SOCIAL-subscribe-request@MAILLISTS.READING.AC.UK>
 List-Owner: <mailto:MET-SOCIAL-request@MAILLISTS.READING.AC.UK>
 List-Archive: <http://maillists.reading.ac.uk/scripts/wa-READING.exe?LIST=MET-SOCIAL>
-Return-Path:
- owner-met-social*ankit*-r*-bhandekar**PGR*-READING*-AC*-UK@MAILLISTS.READING.AC.UK
-X-MS-Exchange-Organization-ExpirationStartTime: 07 Jun 2024 12:13:44.6748
+Return-Path: owner-met-social@MAILLISTS.READING.AC.UK
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jun 2024 12:13:42.8758
  (UTC)
 X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
 X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
 X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
 X-MS-Exchange-Organization-Network-Message-Id:
- fcefb198-7fea-4048-85a3-08dc86eb4705
+ 556cffb6-c632-4cd9-0502-08dc86eb45f3
 X-EOPAttributedMessage: 0
 X-EOPTenantAttributedMessage: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f:0
 X-MS-Exchange-Organization-MessageDirectionality: Incoming
 X-MS-Exchange-Transport-CrossTenantHeadersStripped:
- AM4PEPF00027A66.eurprd04.prod.outlook.com
+ DB1PEPF000509EF.eurprd03.prod.outlook.com
 X-MS-PublicTrafficType: Email
 X-MS-Exchange-Organization-AuthSource:
- AM4PEPF00027A66.eurprd04.prod.outlook.com
+ DB1PEPF000509EF.eurprd03.prod.outlook.com
 X-MS-Exchange-Organization-AuthAs: Anonymous
 X-MS-Office365-Filtering-Correlation-Id-Prvs:
  b4addf01-f5c9-49a4-4935-08dc86e965f0
+X-LD-Processed: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f,ExtFwd
 X-MS-Exchange-AtpMessageProperties: SA|SL
 X-MS-Exchange-Organization-SCL: 1
 X-Microsoft-Antispam: BCL:0;ARA:13230031|35042699013|226143002;
 X-Forefront-Antispam-Report:
  CIP:52.156.253.32;CTRY:IE;LANG:;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:sirius.ease.lsoft.se;PTR:sirius.ease.lsoft.se;CAT:NONE;SFTY:9.25;SFS:(13230031)(35042699013)(226143002);DIR:INB;SFTY:9.25;
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jun 2024 12:13:44.6123
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jun 2024 12:13:42.6883
  (UTC)
-X-MS-Exchange-CrossTenant-Network-Message-Id: fcefb198-7fea-4048-85a3-08dc86eb4705
+X-MS-Exchange-CrossTenant-Network-Message-Id: 556cffb6-c632-4cd9-0502-08dc86eb45f3
 X-MS-Exchange-CrossTenant-Id: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f
-X-MS-Exchange-CrossTenant-AuthSource:
- AM4PEPF00027A66.eurprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthSource: DB1PEPF000509EF.eurprd03.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Anonymous
 X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWXP265MB5624
-X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.3497801
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LO4P265MB6999
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4911197
 X-MS-Exchange-Processed-By-BccFoldering: 15.20.7633.033
 X-Microsoft-Antispam-Mailbox-Delivery:
 	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?Windows-1252?Q?oJEqSKxHLBkZI278UEpZTq7t32JyfCTDrt5bareBVy+ttrV4nO31nqZl?=
- =?Windows-1252?Q?hZUDXUOpYCMPDfycpAe7EVghvSYyYSjrCvAYWNNiIOEsSZGaqdgAkF03?=
- =?Windows-1252?Q?PF/U68Tyae85TvJwXYpzqf0O4vCnr3luuuUeUZqcllA7Lp5bi8B7aKWH?=
- =?Windows-1252?Q?Qfq5SQ6wc5gFDgg6jcJxN6uhF7HAijH2gqi4/KaovmOEiDivNWuHNcUt?=
- =?Windows-1252?Q?rsF8Jx91theeD/SHeVaQ+iTsKWtOxGZLmiXuacawgNa8v5ljnQWIeGWJ?=
- =?Windows-1252?Q?CEUE+tQm83N8CNrk3dO/PL18h4AiNARSCCKk00Ds11cuJMa7XG7NiOJ6?=
- =?Windows-1252?Q?HJsnsbhZiK3O69Uei2UXkvNWBLdNjyJ927zZ3EKrNovlREg0AXugQ8ZV?=
- =?Windows-1252?Q?FDSE5r+4w82ZV9lG3wD/61KRGumP1Va3zy8jQUu/n5u1QdHgn2JLYXmE?=
- =?Windows-1252?Q?w4FCa9XnVugi75bMKv9buZgbC+O+a5bLSyox8znfiKU86UDhs5IlH3tW?=
- =?Windows-1252?Q?TatSIjhfrf4hdr8Tg5EdRg13M/UmccNAi91PRwh4gXKoaFihmjqCc3db?=
- =?Windows-1252?Q?HHWXniJl6EWsyAvdeCLwDUdg0lgFCNOAeynsevyLR3wQgaia0X/ABs4l?=
- =?Windows-1252?Q?yfWNf3hrfFsWgjauT8UJdneD7LuutTUYtV64iDBAl/RQZXRBGnqEUdoK?=
- =?Windows-1252?Q?li+CYWyuNjaKUTCBlRqgVwca8e6mdffc35af0qAz+dXfpl0VfDgM6wGC?=
- =?Windows-1252?Q?FfW+aRZnc/DZ+yvStpTZRnbctU/xFJjsuVj+QVURWjj9IaUS6UugJ5BE?=
- =?Windows-1252?Q?lVk/ZT+NRe8i5j7yPbNbZH0n8872DFHUtKK4iXAtTUwH3oWAqdUFyZwy?=
- =?Windows-1252?Q?PzDLWtHYm2iEMi/f8H9GhTf5MeNQW/i5cLW+1QeOeBdK4pdvInxXvYxM?=
- =?Windows-1252?Q?rCLCHUmEXbGkiebzQHQzvlD5OOyrXt3Ql+YMSEqUYI2ZIHbi04uKbsJ4?=
- =?Windows-1252?Q?vnxdptNY8C5z5lF7filQpNIh5qcGMnnKVttiAIONwV+kKwZWC7clx6WL?=
- =?Windows-1252?Q?kaTFVkR2wcr5fkjYpVjoI2GID7FvXonJDdeGMg2nVUARQlpyPa80SeuO?=
- =?Windows-1252?Q?GHLPlMZkoWn4BEtKmRkmm5c+CrA//bAL3/OsE2OqR+Nk8iFpZc5JAfN4?=
- =?Windows-1252?Q?dMmGFkqhit9cGOIxDsy9o1vUFL3KQBBFwhWRgNr20krYd+pHd+k9P+46?=
- =?Windows-1252?Q?h+ipYq5NOQxkAULrvnjyT9q10sCZouxBdN3QOdhJ4ajQFKQIS76/Rq4P?=
- =?Windows-1252?Q?d4Z2izyhMB51waIkoB+kFCtLzazm27xKQlVWDhouox1gVygUG1momeMP?=
- =?Windows-1252?Q?osen1MQypZHdft6RgGHzj51Sx/EB3nMVqqnvcB3XB2NpAr2v3+heaNW1?=
- =?Windows-1252?Q?/ZowKmiz0+CyZ5oyrWodYg=3D=3D?=
+	=?Windows-1252?Q?McEtV3sHpT8i3q0DXCrm7mgn+fXxmXnDymCmwbx8N8cZU2yJAyiXsQVB?=
+ =?Windows-1252?Q?9HZ4+YwYZcxaUsTF6HAsumHe2xrp9ngdSb08SnDAFbYkkoI96gDtps+A?=
+ =?Windows-1252?Q?2zwQJ+f4uR35qmWz6xlKTi7LDG2uIeb8y0vvI3n+wqCO8KI1SdYnWadu?=
+ =?Windows-1252?Q?crP5HiRRhRPmSG1CKnMyiqoGvgHlkdzcpgfTn7aiu3Jj8/KsHzhsISfZ?=
+ =?Windows-1252?Q?MJ8JJHuuBPtH9u9lC2gEFDxDXtvJOn2qrBIVj5snUBmBOnUnTS2+95km?=
+ =?Windows-1252?Q?zjDvh6QKwveuLWGlYffZLvBWq081zHg1rFF16Z1SiuA88XMfuYacyoiy?=
+ =?Windows-1252?Q?2LTgZuTQrGjKE8eStdlBEczvukOzprjixtccMzy+qyiA+L9MabfXnjYY?=
+ =?Windows-1252?Q?/DbxzMsXqQAu/XPd3HKy6EN3Y8pj0fbERYKNEyhjC93SPmUU4O9qaqUF?=
+ =?Windows-1252?Q?fp3RXTm86H5tyOtrNQYVfw7PRemzQxozfaxmlu45JatLOLjrHt3pWO1r?=
+ =?Windows-1252?Q?cM00z8pUNnIKKrnnnn6BrOtbUMj9b8z2b4pC6hbWFWkg4DF4ophKa1C7?=
+ =?Windows-1252?Q?kUGqeUkIOTxhYyPPFcF4Ye1fpn3FiOsCnoeVRz19+GYHEkamWW+LqLaB?=
+ =?Windows-1252?Q?DR5HWMtG8HlqnqW2JsP9KR5H2rozEjO1VEciiqu9EgS/GB0ouAqLXS5b?=
+ =?Windows-1252?Q?ilN3fDJWFmC8kxFQDo5dHxKfZzFUAE72rNvLerTZw6HZOwgC3Ka6u64O?=
+ =?Windows-1252?Q?c/Mabiif+OOJzOMU7ftSMD9NfxOG2cGWf4pR+4/JiSjeDUVdhK5cDjWc?=
+ =?Windows-1252?Q?32XyWXXynkiT3BAQY0ZxKkc4YlWgP/54qG4nqbBucLazacBGVWC/BOYY?=
+ =?Windows-1252?Q?g8RBzwu9IW2aSwUxhKUX0XiXwciexSmCz7LVUJ/21AsJwaKMrBjBc62K?=
+ =?Windows-1252?Q?/Mnq0EgJlF7h4IwoSoLjIcZdegZgbVRctYrP4D7goG0/QDoNndV+mPPY?=
+ =?Windows-1252?Q?yGsgtJgSKElIegboWhFean6PlOL/2Glol6kgsWjsfUEPfHrsna8mgoV2?=
+ =?Windows-1252?Q?5hrav7II2a4y5zYfSkJ4a5j6gfrTZmk4nE374ouvgH18mCNNn6E5xKTt?=
+ =?Windows-1252?Q?caE5LzHbacnk4HZB8pP0FN0iR4EEG4tY6TReH4V+NIFdewKsPszBwDDz?=
+ =?Windows-1252?Q?N2H4OrcwrOpEjjEtEpQXnM/o9wXn7QEdML+D/YtyPK0LmGXUkr0igmRp?=
+ =?Windows-1252?Q?ZUb4HwgVB71UhsYfr4iXqZB2hrBs7rvv5893BKDb7EcctiJ1hV5beqyw?=
+ =?Windows-1252?Q?Axb75eN1E2H1ND28IcQfoJeOnnyGHbnICj07kPaTc6PHtyy0g/w7WNZC?=
+ =?Windows-1252?Q?zwZGNVOa+ZLFjdUkCvI5FZn60SPFWvCUeRpuQ4qmb8tmyHLFnYKT3GIq?=
+ =?Windows-1252?Q?cA6NyklNQer4vWvClEgiwg=3D=3D?=
 MIME-Version: 1.0
 
 --_004_LO6P265MB604742448AEAE06B339D5879D4FB2LO6P265MB6047GBRP_

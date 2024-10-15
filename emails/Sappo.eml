@@ -1,32 +1,67 @@
-Received: from LO3P265MB1883.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:fa::14)
- by CWLP265MB2628.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 10 May 2024
- 10:43:53 +0000
-Received: from DB8PR09CA0035.eurprd09.prod.outlook.com (2603:10a6:10:a0::48)
- by LO3P265MB1883.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:fa::14) with
+Received: from CWLP265MB2324.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:6f::10)
+ by LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 10 May 2024
+ 10:43:50 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=H2TuMKfLtYTXJ9ILQXWlbwtxyMg6/Qml07wOQP+bNC/2uBBHg+zNITMvxQlU7WQRWxBlGsJKx/6dSXxDWfUBdQ/1aOmlZjVPYD7im7KXbRsZh+7bZ7gtwj2bx+Z1UXTR4gcoTLbErF0CPrCPvdP9jUiQW/6hXClOdA/cmdcLAoXnMe+nLsRRt7ZfuZ8SRpPqL97+vLmWSkW5iB8Wmml02ZsnEKTFUCdfTHzNDu9PG017FoW41jb/j1Ki1blHCWj+c8uYCc8ExfEimpxivJ4RUoi52o2xg65lJjffKXlQuB7tfgInqF8Su54ZzxvNXX2N0+7anGzSVtwYFGLldVy32g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=cJjFlZZphikfpeMq+IdbE3Q9NFZRzJdirFJxaJMFpjE=;
+ b=AthI2tDOGSQZXTaGmuj3gssVuUwB11xrdWsNcT/LkUFjQe1AgpzQVVPkCLrCItGYpoJwXdTSaNvy4rfVkasIHbKxKrfFjaD+7I9ttxGtGZEz8wrl8Yj7WfcfA798hclq5UEf5IZYFdU9bfMynYH0YHo/eteWIstbw4rCuEc2iE48IMFTpUZRDABuTYqTVkLmSg8etsAezngGDDZS28H1fXyykOywetp5Tx3Lc9PtcjU1aGEvPZcZA+wspVu3sQjqD1fGjEdQDXwEJF4surRJlOWmmA3AroMRm2o/C7vdQM3IBsU+RhhG2n+Y3JjBzmKZmTvj4b6MXlefMjRL9v4iiQ==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 52.156.253.32) smtp.rcpttodomain=pgr.reading.ac.uk
+ smtp.mailfrom=maillists.reading.ac.uk; dmarc=pass (p=none sp=none pct=100)
+ action=none header.from=pgr.reading.ac.uk; dkim=pass (signature was verified)
+ header.d=maillists.reading.ac.uk; arc=fail (47)
+Received: from DU2P250CA0008.EURP250.PROD.OUTLOOK.COM (2603:10a6:10:231::13)
+ by CWLP265MB2324.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:6f::10) with
  Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.49; Fri, 10 May
  2024 10:43:47 +0000
-Received: from DB5PEPF00014B95.eurprd02.prod.outlook.com
- (2603:10a6:10:a0:cafe::97) by DB8PR09CA0035.outlook.office365.com
- (2603:10a6:10:a0::48) with Microsoft SMTP Server (version=TLS1_2,
+Received: from DB1PEPF000509F9.eurprd02.prod.outlook.com
+ (2603:10a6:10:231:cafe::fb) by DU2P250CA0008.outlook.office365.com
+ (2603:10a6:10:231::13) with Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.47 via Frontend
  Transport; Fri, 10 May 2024 10:43:47 +0000
+Authentication-Results: spf=pass (sender IP is 52.156.253.32)
+ smtp.mailfrom=MAILLISTS.READING.AC.UK; dkim=pass (signature was verified)
+ header.d=MAILLISTS.READING.AC.UK;dmarc=pass action=none
+ header.from=PGR.READING.AC.UK;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of MAILLISTS.READING.AC.UK
+ designates 52.156.253.32 as permitted sender)
+ receiver=protection.outlook.com; client-ip=52.156.253.32;
+ helo=sirius.ease.lsoft.se; pr=C
 Received: from sirius.ease.lsoft.se (52.156.253.32) by
- DB5PEPF00014B95.mail.protection.outlook.com (10.167.8.233) with Microsoft
+ DB1PEPF000509F9.mail.protection.outlook.com (10.167.242.155) with Microsoft
  SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7544.18
  via Frontend Transport; Fri, 10 May 2024 10:43:47 +0000
 Received: from CASTOR (castor.ease.lsoft.se [52.156.253.36])
-	by sirius.ease.lsoft.se (Postfix) with SMTP id 094DC2006D67;
-	Fri, 10 May 2024 10:43:45 +0000 (UTC)
+	by sirius.ease.lsoft.se (Postfix) with ESMTP id 00FCE2006D65;
+	Fri, 10 May 2024 10:43:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; d=MAILLISTS.READING.AC.UK; s=DEFAULT; c=relaxed/relaxed; bh=cJjFlZZphikfpeMq+IdbE3Q9NFZRzJdirFJxaJMFpjE=; i=@MAILLISTS.READING.AC.UK;
+ h=Approved-By:ARC-Seal:ARC-Message-Signature:ARC-Authentication-Results:Thread-Topic:Thread-Index:Accept-Language:Content-Language:msip_labels:Content-Type:MIME-Version:Message-ID:Date:Reply-To:Sender:From:Subject:To:List-Help:List-Unsubscribe:List-Subscribe:List-Owner:List-Archive;
+ b=NKe9H0epUQjL0Ceq442Zo38p2FlLvZCz85fx7RAisPzZUx/9ZGRB2Ge5Upm890LvRQ2l2ixCVxYDRB0RW8ieiiw6HeWxIkn9tU8ezNOuXrqqaGXkMQ2ibciZw0gLG11A+Jk/i1Tn22CptDxgz563KBj2Pxpc5detz6k4wW0SoSE=
 Received: by MAILLISTS.READING.AC.UK (LISTSERV-TCP/IP release 17.0) with spool
           id 929596 for MET-SOCIAL@MAILLISTS.READING.AC.UK; Fri, 10 May 2024
           10:43:23 +0000
+Approved-By: n.c.robinson@READING.AC.UK
 Received: from GBR01-LO4-obe.outbound.protection.outlook.com
           (mail-lo4gbr01on2137.outbound.protection.outlook.com
           [40.107.122.137]) by CASTOR.EASE.LSOFT.SE (SMTPL release 1.1e)
           (envelope-from <i.r.gorst@pgr.reading.ac.uk>) for
           MET-SOCIAL@MAILLISTS.READING.AC.UK with TCP; Fri, 10 May 2024
           10:36:05 GMT
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+          b=N8bj1e+/MWVWprktwwXrg7UNqeJCGNLvzMkzc0bArcOC5gqFTgrsJk+v5mSQUs+ViPjfOusQRsGHanBOwKkdyldfxkU8N4jkiC9eCPVmUbWXI02PnPPb8JiJ9szKHvpk9FzeCCQYuO7LwA2r5E88nDkV9IDAU3DyLaVwhD0TWbp3r4lMAxYpJ7/+oPLqj+J5EgQoHfOoAnYtfvGb0QNIutD/lt7bKXbhkizXuVd/wLI6Gmqre8/+EmCR+h9xm9rrBHHkZHaILG/oizWvv/lHBqhygu+eOl5lELHZIphlKQW23UcdNqBYA0sEIA1lgZqob2XonIKPj18sRZteM71u3Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+                       s=arcselector9901;
+                       h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+                       bh=RlTQTL6tiNNJboEhT0JBhPn0wQxULkO+cKKh32iUd+U=;
+                       b=n9WuSrfroENZy90AQYQQZSJsDp5IHb6JAyAp62PAULwD86YN6CgjGHZrjcA2798sVapm014Rwh8Ngno09KCF8LtOw1BaL/7B0d3zEvQn05dGXPo2xexQFL6hpUuBwOkXpBjbLvbkQw7086BMAV5h0xE7/uRL2J8Ha3HbBPgIfo6zrXwKTukW3q/iur1n9v8zEpT4rZdT5e3bGBWxa5uBdenAsgTjLBFa+CE7CqWlJj/kN8AABqJimy0/lrdsNA4nju47PTw4+Aw7BWMfnX4/hEf72mwV4ME3UnNiaDLg/ZavhrZ9B85A6cmwFRQasHSn5jOD5O+/eb83y3VWD5ls8A==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+                         smtp.mailfrom=pgr.reading.ac.uk; dmarc=pass
+                         action=none header.from=pgr.reading.ac.uk; dkim=pass
+                         header.d=pgr.reading.ac.uk; arc=none
 Received: from LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:20e::10)
           by CWLP265MB3092.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:8e::11) with
           Microsoft SMTP Server (version=TLS1_2,
@@ -37,70 +72,121 @@ Received: from LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM
           LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM
           ([fe80::c38a:7686:ede1:3801%3]) with mapi id 15.20.7544.048; Fri, 10
           May 2024 10:36:01 +0000
-From: Isabelle Gorst <i.r.gorst@PGR.READING.AC.UK>
-To: "MET-SOCIAL@MAILLISTS.READING.AC.UK" <MET-SOCIAL@MAILLISTS.READING.AC.UK>
-Subject: Sappo
 Thread-Topic: Sappo
 Thread-Index: AQHaosUmE63zhUTS+k2++eSsTNsxew==
-Sender: Meteorology Dept Social e-mail list
-	<MET-SOCIAL@MAILLISTS.READING.AC.UK>
-X-MS-Exchange-MessageSentRepresentingType: 2
-Date: Fri, 10 May 2024 10:36:01 +0000
-Message-ID:
-	<LO4P265MB4343EB9FBCFF83F828D68216B9E72@LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM>
-List-Help:
-	<http://maillists.reading.ac.uk/scripts/wa-READING.exe?LIST=MET-SOCIAL>,
-           <mailto:LISTSERV@MAILLISTS.READING.AC.UK?body=INFO%20MET-SOCIAL>
-List-Subscribe: <mailto:MET-SOCIAL-subscribe-request@MAILLISTS.READING.AC.UK>
-List-Unsubscribe:
-	<mailto:MET-SOCIAL-unsubscribe-request@MAILLISTS.READING.AC.UK>
-Reply-To: Isabelle Gorst <i.r.gorst@pgr.reading.ac.uk>
 Accept-Language: en-US
 Content-Language: en-US
-X-MS-Exchange-Organization-AuthAs: Anonymous
-X-MS-Exchange-Organization-AuthSource:
-	DB5PEPF00014B95.eurprd02.prod.outlook.com
 X-MS-Has-Attach: yes
-X-Auto-Response-Suppress: All
-X-MS-Exchange-Organization-Network-Message-Id:
-	4602051b-c208-4e77-b065-08dc70de1287
-X-MS-Exchange-Organization-SCL: 1
 X-MS-TNEF-Correlator:
-X-MS-Exchange-Organization-RecordReviewCfmType: 0
 msip_labels:
-x-ms-publictraffictype: Email
-received-spf: Pass (protection.outlook.com: domain of MAILLISTS.READING.AC.UK
- designates 52.156.253.32 as permitted sender)
- receiver=protection.outlook.com; client-ip=52.156.253.32;
- helo=sirius.ease.lsoft.se; pr=C
+x-ms-traffictypediagnostic:
+ LO4P265MB4343:EE_|CWLP265MB3092:EE_|DB1PEPF000509F9:EE_|CWLP265MB2324:EE_|LO4P265MB4343:EE_
+X-MS-Office365-Filtering-Correlation-Id: 49c0fd74-d7d2-45f4-cf8f-08dc70de1250
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted:
+ BCL:0;ARA:13230031|366007|376005|1800799015|38070700009;
+X-Microsoft-Antispam-Message-Info-Original:
+ =?us-ascii?Q?ct7ARq1Fdi2ht1QM2QGLhJ/dtFV/pxQqPVRcuBSRR4BGGWI9a3HPeNscBkHg?=
+ =?us-ascii?Q?qYCjC+z47XXGfCEoWpy7wOimOo6nXZNaSRniJc/AS/1u+cCI5xtX59TCnyc6?=
+ =?us-ascii?Q?0JnqH+QAuOPfv/UmIPoLcNQA5GWx02AzYHeZy4nRWYqWkKmrrvp3wAPtkAMY?=
+ =?us-ascii?Q?Nd8AQCsWbezS+KtJfQwBXOr6oYAH4gX8JUtsc5ResY7B/6PHFOO8w58o//de?=
+ =?us-ascii?Q?OGQqAf+IEtHnsa9MFdkSU5jAg7eUB7dv/pjE7yFjGoWvVXPwJaXBzlBgahzU?=
+ =?us-ascii?Q?MnAhpd3nUZ7TaTa3RenvjMHGk24dXsHP8iSge2cMbB15Ftn2eTAdnwg6z8C2?=
+ =?us-ascii?Q?tQXfJJHZybrYqvqJR9jwF01RcrdalqO90UxWhsnRsopHRl43DplRTVqAEHM8?=
+ =?us-ascii?Q?h07wQUGayRA/Fx6Ckyf5dIzdL4J343Yi10lwKkDhlxumvJhJ4aKKmlDeT7eg?=
+ =?us-ascii?Q?liJbAgZ18QahSHv2J2YhJh6eLw9VXx3YC9flf/cmng9zlzTOKM+zKQMFMwGi?=
+ =?us-ascii?Q?T60rBqvQzxlBYJSofraSm2d1wJBA9zU3+8gjeQYqqhcqWS0T0WUGAXnbKnbb?=
+ =?us-ascii?Q?71IAhvE2qj4BDm40BomS4wc+bDDqNo5AcBX68zomkpLOiWlWnWtZglwYpRQo?=
+ =?us-ascii?Q?lyBGVXReuc76C3akg03FgWP+MJbg8a+uvdQ32vNZNbsCM9hQBfomWBlhQrAM?=
+ =?us-ascii?Q?qhrzeJgcx+M2zFXwoJUk9HjuXYyJYxPOL/pQk8V+GKJ5o7ROOhf1zi3SBe7J?=
+ =?us-ascii?Q?/r0EuDVCVCcXmL4P0oB6kJ1o0DUZ6OtqqzC3yJlhVa07Woous/K4eYmKzFCS?=
+ =?us-ascii?Q?jz7+yB6+hP9riW2e7modePL6i5IX4loy/OOoXsHIZ4SFaPzrBhhQEuFCE/8f?=
+ =?us-ascii?Q?2Vz9H5MObstMYvBVElmc0+qda8PpZgw6PlY4FgRCgEes2pXsgkZ+fPh4KK4J?=
+ =?us-ascii?Q?D1nExiNRoU9zbzc3za6pWk6KkitYDwckElT+UeFXMEZLLtHyFhUOV4Xeq+rU?=
+ =?us-ascii?Q?7EUVur1al8QjXpe/C3gV0RiFDnt3RNVIrtP8owC8lcR5UHPrqdaaGJfThF9m?=
+ =?us-ascii?Q?YakgD0ETT3ln8UDUCQzz1xuaSKZZmNYvFOEKxNinn8RJLebnZlbnoA1em63I?=
+ =?us-ascii?Q?Uto2LtQHsKzB+Neyoa/qcRZYKy/uMU07HKNheFoP26/dyvic9si5tkm6SfcT?=
+ =?us-ascii?Q?WVuo9hju8I/YBSSYkgfXmrrTVhRPZrCjz97zyaPGPcvQPvfmeXxbZ1uQ3wnO?=
+ =?us-ascii?Q?Pf4amydeEx1dPe3Kcfd56cuos7um9jh3ocI8TxsV6g=3D=3D?=
+X-Forefront-Antispam-Report-Untrusted:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230031)(366007)(376005)(1800799015)(38070700009);DIR:OUT;SFP:1102;
+Content-Type: multipart/mixed; boundary="_004_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWLP265MB3092
+Message-ID: <LO4P265MB4343EB9FBCFF83F828D68216B9E72@LO4P265MB4343.GBRP265.PROD.OUTLOOK.COM>
+Date: Fri, 10 May 2024 10:36:01 +0000
+Reply-To: Isabelle Gorst <i.r.gorst@PGR.READING.AC.UK>
+Sender: Meteorology Dept Social e-mail list <MET-SOCIAL@MAILLISTS.READING.AC.UK>
+From: Isabelle Gorst <i.r.gorst@PGR.READING.AC.UK>
+Subject: Sappo
+To: MET-SOCIAL@MAILLISTS.READING.AC.UK
+Precedence: list
+List-Help: <http://maillists.reading.ac.uk/scripts/wa-READING.exe?LIST=MET-SOCIAL>,
+           <mailto:LISTSERV@MAILLISTS.READING.AC.UK?body=INFO%20MET-SOCIAL>
+List-Unsubscribe: <mailto:MET-SOCIAL-unsubscribe-request@MAILLISTS.READING.AC.UK>
+List-Subscribe: <mailto:MET-SOCIAL-subscribe-request@MAILLISTS.READING.AC.UK>
+List-Owner: <mailto:MET-SOCIAL-request@MAILLISTS.READING.AC.UK>
+List-Archive: <http://maillists.reading.ac.uk/scripts/wa-READING.exe?LIST=MET-SOCIAL>
+Return-Path: owner-met-social@MAILLISTS.READING.AC.UK
+X-MS-Exchange-Organization-ExpirationStartTime: 10 May 2024 10:43:47.2104
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 49c0fd74-d7d2-45f4-cf8f-08dc70de1250
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ DB1PEPF000509F9.eurprd02.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ DB1PEPF000509F9.eurprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ 850da39b-c748-4a1b-4f8e-08dc70dcfcde
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230031|35042699013;
+X-Forefront-Antispam-Report:
+ CIP:52.156.253.32;CTRY:IE;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:sirius.ease.lsoft.se;PTR:sirius.ease.lsoft.se;CAT:NONE;SFS:(13230031)(35042699013);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 May 2024 10:43:47.1479
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 49c0fd74-d7d2-45f4-cf8f-08dc70de1250
+X-MS-Exchange-CrossTenant-Id: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f
+X-MS-Exchange-CrossTenant-AuthSource: DB1PEPF000509F9.eurprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWLP265MB2324
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.7864826
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7544.013
 X-Microsoft-Antispam-Mailbox-Delivery:
 	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?Windows-1252?Q?Kl18Q3vkSCB6LleKln/QiIpcUZQTLw19b3SXL5aHGttXb/n4BbtlACCh?=
- =?Windows-1252?Q?PF16s5Okn1OGueTZi+THkxfWAjSArvMpqsJj/aVqwpF6idgZnsA+E5yX?=
- =?Windows-1252?Q?CBItvIsz8nV86iHpHyqyWTULZ3lYPDjtLw76u+sEgKA5MNO9Gclk+L3x?=
- =?Windows-1252?Q?694gH7+xGhD8nXgbJMejoAgISLakldWvh+rmAVNIXH9F53D/fOXKY4ZM?=
- =?Windows-1252?Q?WIk3RNJSJWWSNtyLCFAWLFDTePw2qWX7hhKVAMi3R8ZUpyiqN5BjffMV?=
- =?Windows-1252?Q?JavBEwg0pVACilrYFMCL0Ytz+o+ZPlNrtZezOwYDqtabuumPP+6V4okx?=
- =?Windows-1252?Q?Kvghd9nXscSygSuyv9K1uIRB9cI+ak/3HVnLNbsCeQuAnhjvi49NBOGz?=
- =?Windows-1252?Q?ZdedIJZEe+LSbTkmnc1joMSktJPvvFJ61fz/v3nWEKgGwCJAYfIxR20P?=
- =?Windows-1252?Q?JkZRtChRp7CUkr4iQsUFubLir3l18DcUOe1O7w7JrIsJjZX4QZVz3wYa?=
- =?Windows-1252?Q?xJV3N2MK91wDGUzWyxUU0F37qAlPdtIB9fpU1j+zvpG5xHKgSeWYsyu8?=
- =?Windows-1252?Q?fuKiDlKtPbkBYmFVOfAtt9TobTX3AKHi/bc8CWOftHq2Itro8YBGRwtn?=
- =?Windows-1252?Q?Jmrfr0SRuxiE1e5VN0ETuQUAOfJdah2zIM2WhilDtYAQBaRSYWJE8GJ1?=
- =?Windows-1252?Q?j3fyERMj+ZYtTZOAMmQAXtoH4N+jemIpZ9YgOEeZaaCzuUKGk7OhW7En?=
- =?Windows-1252?Q?Xd2w/jUqRdfBFXuoMCoMdBel7t7eYc3tkiFetbk9TaytcxclqQiA4DHS?=
- =?Windows-1252?Q?gPSn731Rz4Rx7iNN5+IiDmbsoULGUAqxDkkJB4G3o2hQhLbg5Ep5Vt14?=
- =?Windows-1252?Q?RRYbbQvvhC5Af5IucUYFeuXz3lmA3lvkWGLcVryUD1oH0CHbtaFW9dAm?=
- =?Windows-1252?Q?OgFElIx7101h9fmT9zkWNdF5P9dT0ZmFWvPzM2lxkxsznsqtRzHNrSmO?=
- =?Windows-1252?Q?SEUnmg907X9U4iQJpwyjjgA8Dw1tJKTE9dVFz96vihz0LWnMa0nMIoC3?=
- =?Windows-1252?Q?LdJ54RgIalScVEFoajak6ix7C0Ktqw89Mr4rK5CwqwA3S5fVYOc5lMw1?=
- =?Windows-1252?Q?Z+QaWxQhG7deH8aojtNjS//LUAG/FYc4wEYap7pujeKBdTD4t8Ca4FoC?=
- =?Windows-1252?Q?lz5qUv7sGKesdAakm0H4x7oJgsdRK4OD46OFBzJdtPle0N+0ThKZ1MPI?=
- =?Windows-1252?Q?HAZZ4g4wj4d+oLXv/emUbzf9osdiB6pwhBgTQ0/aQwWqsoD2DpKvU+9g?=
- =?Windows-1252?Q?iE2HmBLWNmOBruoYe4WVJksLu47sW1nkkL6SYrpnb+rhEPSl?=
-Content-Type: multipart/mixed;
-	boundary="_004_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_"
+	=?Windows-1252?Q?y7TGj963ZFrk37vCjbU3FstjIU0YbX1LXZx0v3lKYyg/z0cx+0DZ2Bbr?=
+ =?Windows-1252?Q?i27NiYGnVGVrAIkE40OnEz/X+utjIs1TRo9uA3xCnc2hvo4WCM5J2wYX?=
+ =?Windows-1252?Q?cLe0g45P2mMnjSzDfIk1eVcPk3aBdTzagjCPGLTzS3MDsZ3/62U3c07D?=
+ =?Windows-1252?Q?SuyvXjwU6pbaJjsdNZ5yl74hnPlDsCj/xQDm0MeC6UGGkL6wyQpWowSu?=
+ =?Windows-1252?Q?0kxH1HyOsHhOr/T9cksbBq5Kg1WLAyvtLdVT3wUmKldG/aOw2boPaCJc?=
+ =?Windows-1252?Q?BsweiecsmUpGhXzt8sZLHYp9ZvtKl0oYdeR++prh6VVikdf27k+9NdyF?=
+ =?Windows-1252?Q?IgxZNDFhPUWfufBKy/Y6B4K7JE6jITG8GUI8y2zGGo/889MCKdhIghr8?=
+ =?Windows-1252?Q?BUImhG8w3LeVBogCOi69Iwu3lJkxn7GGcG2HP40w1CIigVoTiKIGHr7X?=
+ =?Windows-1252?Q?aN+rNFZDtHQrHqoD3n0EymBb0bKJPExY73oZ2T+eh96Ef72piUCE2WAC?=
+ =?Windows-1252?Q?tX2vqkyGyu34wvmbRRjUK5jWQmCdQVjTfCBc7vrsydrx7AsL3wVKrxdH?=
+ =?Windows-1252?Q?dXIx3I5Cz6vuZ7IYI0Z0qTQFnoZbSpCHxBgnNU2kM85EzgYU4xWL2svL?=
+ =?Windows-1252?Q?ayac//I3OfRHcQt2300dKfS6ZiAspnbU/Aj0pNQO/OPtIW+bkigTLLXH?=
+ =?Windows-1252?Q?UjTbjSs5tJFpdqzGOgjMlTcoLowJKDGlNKlUTBOA/nwiKK13Ph9lfOp7?=
+ =?Windows-1252?Q?WE+mhgGjDmJZi422UdfPWKD8D5+kyrDadVGzOBhmFe77AEJ0sIbFvsy0?=
+ =?Windows-1252?Q?xDm+meMUWZyEc6bYLP8d5dsEw2cfo6Jhw2rqfbmi79Z6pZ5X5TFusl9Z?=
+ =?Windows-1252?Q?FfViSEpdlVZaT6e8bOQBGuCijQ6GTIfl3CUsUzvnZ90vVZlVbC6orcLM?=
+ =?Windows-1252?Q?XmmcuB/VXB2zakMJJS3MLfuGIlzPb/y1R1KXDXj4iUXcJbwVVzAJ5RIb?=
+ =?Windows-1252?Q?bNnQ7zmGAwCAs0KiJ4IF8yg2kAT9HO2WN3zX04RvgiZiz50usgArWoGN?=
+ =?Windows-1252?Q?yBU0z8NsKzHiFhbVltnjWLizLGtYczyh9XjPZ0mQhh8cnWGSalvmcaiF?=
+ =?Windows-1252?Q?ocUuJoI8tiLrwuHEblP49/uoZl315nEQISEe8vSrXlBvZGiu10w7nTgL?=
+ =?Windows-1252?Q?8RlYd7t8SCBroa9DYfCYHr2yvMdHbFjY4h1BVlAyHmLUpfd8ZmlUzirY?=
+ =?Windows-1252?Q?3Yabru3l1x29yuYly95s/fYpKQwHbIynsmJXIjl2q7cgfu2J7nJ6FAH3?=
+ =?Windows-1252?Q?6Bf0emJexmguGvcG6HGY+6PZe8o=3D?=
 MIME-Version: 1.0
 
 --_004_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_
@@ -146,19 +232,18 @@ The Sappoteers
 **Dazzle =3D group of zebras
 ***Another nursery rhyme?
 
-________________________________
+############################
 
-To unsubscribe from the MET-SOCIAL list, click the following link:
-http://maillists.reading.ac.uk/scripts/wa-READING.exe?SUBED1=3DMET-SOCIAL&A=
-=3D1
+To unsubscribe from the MET-SOCIAL list:
+write to: mailto:MET-SOCIAL-SIGNOFF-REQUEST@MAILLISTS.READING.AC.UK
+or click the following link:
+http://maillists.reading.ac.uk/scripts/wa-READING.exe?SUBED1=3DMET-SOCIAL&A=3D1
 
 --_000_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_
 Content-Type: text/html; charset="Windows-1252"
-Content-ID: <3E9E64FA0F14EC44A47FB02A3A1587A6@GBRP265.PROD.OUTLOOK.COM>
 Content-Transfer-Encoding: quoted-printable
 
-<html>
-<head>
+<html><head>
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
 252">
 <style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
@@ -248,6 +333,8 @@ t-size: 11pt; color: rgb(0, 0, 0);">
 pt; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, H=
 elvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
 ***Another nursery rhyme?</div>
+</body>
+</html>
 <br>
 <hr>
 <p align=3D"center">To unsubscribe from the MET-SOCIAL list, click the foll=
@@ -256,18 +343,15 @@ owing link:<br>
 ET-SOCIAL&amp;A=3D1" target=3D"_blank">http://maillists.reading.ac.uk/scrip=
 ts/wa-READING.exe?SUBED1=3DMET-SOCIAL&amp;A=3D1</a>
 </p>
-</body>
-</html>
 
 --_000_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_--
 
 --_004_LO4P265MB4343EB9FBCFF83F828D68216B9E72LO4P265MB4343GBRP_
 Content-Type: image/png; name="Sappo Flyer 3.png"
 Content-Description: Sappo Flyer 3.png
-Content-Disposition: attachment; filename="Sappo Flyer 3.png"; size=1594711;
+Content-Disposition: attachment; filename="Sappo Flyer 3.png"; size=796876;
 	creation-date="Fri, 10 May 2024 10:32:39 GMT";
-	modification-date="Fri, 10 May 2024 15:16:40 GMT"
-Content-ID: <2554E00F6DE84B46966C87C1C5E72B8C@GBRP265.PROD.OUTLOOK.COM>
+	modification-date="Fri, 10 May 2024 10:32:59 GMT"
 Content-Transfer-Encoding: base64
 
 iVBORw0KGgoAAAANSUhEUgAAAn0AAAGoCAYAAAAzaFPMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx

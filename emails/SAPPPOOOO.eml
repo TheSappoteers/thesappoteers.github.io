@@ -1,23 +1,23 @@
-Received: from LO0P265MB6318.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:280::14)
- by CWLP265MB2628.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 3 May 2024
- 14:56:20 +0000
-Received: from AM0PR10CA0054.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:20b:150::34)
- by LO0P265MB6318.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:280::14) with
+Received: from LO6P265MB6111.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:2b2::6)
+ by CWLP265MB4347.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 3 May 2024
+ 14:56:02 +0000
+Received: from DB8PR03CA0032.eurprd03.prod.outlook.com (2603:10a6:10:be::45)
+ by LO6P265MB6111.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:2b2::6) with
  Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7519.31; Fri, 3 May
- 2024 14:56:17 +0000
-Received: from AM4PEPF00027A5E.eurprd04.prod.outlook.com
- (2603:10a6:20b:150:cafe::be) by AM0PR10CA0054.outlook.office365.com
- (2603:10a6:20b:150::34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.31; Fri, 3 May
+ 2024 14:55:58 +0000
+Received: from DU2PEPF0001E9C6.eurprd03.prod.outlook.com
+ (2603:10a6:10:be:cafe::c3) by DB8PR03CA0032.outlook.office365.com
+ (2603:10a6:10:be::45) with Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7544.30 via Frontend
- Transport; Fri, 3 May 2024 14:56:16 +0000
+ Transport; Fri, 3 May 2024 14:55:58 +0000
 Received: from sirius.ease.lsoft.se (52.156.253.32) by
- AM4PEPF00027A5E.mail.protection.outlook.com (10.167.16.72) with Microsoft
- SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7544.18
- via Frontend Transport; Fri, 3 May 2024 14:56:16 +0000
+ DU2PEPF0001E9C6.mail.protection.outlook.com (10.167.8.75) with Microsoft SMTP
+ Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7519.19 via
+ Frontend Transport; Fri, 3 May 2024 14:55:57 +0000
 Received: from CASTOR (castor.ease.lsoft.se [52.156.253.36])
-	by sirius.ease.lsoft.se (Postfix) with ESMTP id DF140200F455;
-	Fri,  3 May 2024 14:56:15 +0000 (UTC)
+	by sirius.ease.lsoft.se (Postfix) with ESMTP id 24D62200FF9D;
+	Fri,  3 May 2024 14:55:57 +0000 (UTC)
 Received: by MAILLISTS.READING.AC.UK (LISTSERV-TCP/IP release 17.0) with spool
           id 891639 for MET-SOCIAL@MAILLISTS.READING.AC.UK; Fri, 3 May 2024
           14:55:56 +0000
@@ -36,7 +36,7 @@ Received: from LO3P265MB1913.GBRP265.PROD.OUTLOOK.COM
           ([fe80::8b7:d66e:19cf:b19b]) by
           LO3P265MB1913.GBRP265.PROD.OUTLOOK.COM ([fe80::8b7:d66e:19cf:b19b%7])
           with mapi id 15.20.7544.029; Fri, 3 May 2024 14:49:26 +0000
-From: Catherine Toolan <c.toolan@PGR.READING.AC.UK>
+From: Catherine Toolan <c.toolan@pgr.reading.ac.uk>
 To: "MET-SOCIAL@MAILLISTS.READING.AC.UK" <MET-SOCIAL@MAILLISTS.READING.AC.UK>
 Subject: SAPPPOOOO
 Thread-Topic: SAPPPOOOO
@@ -58,11 +58,11 @@ Accept-Language: en-GB, en-US
 Content-Language: en-GB
 X-MS-Exchange-Organization-AuthAs: Anonymous
 X-MS-Exchange-Organization-AuthSource:
-	AM4PEPF00027A5E.eurprd04.prod.outlook.com
+	DU2PEPF0001E9C6.eurprd03.prod.outlook.com
 X-MS-Has-Attach: yes
 X-Auto-Response-Suppress: All
 X-MS-Exchange-Organization-Network-Message-Id:
-	e4a23402-d8f1-497e-7ec8-08dc6b812eff
+	7602c158-c9ea-4692-28c1-08dc6b8123b9
 X-MS-Exchange-Organization-SCL: 1
 X-MS-TNEF-Correlator:
 X-MS-Exchange-Organization-RecordReviewCfmType: 0
@@ -72,33 +72,34 @@ received-spf: Pass (protection.outlook.com: domain of MAILLISTS.READING.AC.UK
  designates 52.156.253.32 as permitted sender)
  receiver=protection.outlook.com; client-ip=52.156.253.32;
  helo=sirius.ease.lsoft.se; pr=C
+x-microsoft-antispam: BCL:0;ARA:13230031|35042699013;
 X-Microsoft-Antispam-Mailbox-Delivery:
 	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?iso-8859-1?Q?8UJ8Y2N8vvJLxmAE3X9FwjmPD95T9BurLjGefPvuHnDwaTEJ2yBNyFmf6R?=
- =?iso-8859-1?Q?R/GJBaxyjtyUqLQKym3EodCZyxSEC4ARso6soztYXAn7duUDK1fJ0ejc9k?=
- =?iso-8859-1?Q?/wKqidl7rQtHHp0LLJtvGE/1SQkC5R5cXwRshPI/r8WospYBjcVVE2T/P/?=
- =?iso-8859-1?Q?Hs5sQDF4JDWyhh8NL+85flYYYlGovcJNIvuJ4OkcoSQHOs/vVf9UDmwEyf?=
- =?iso-8859-1?Q?aDQN0kowPNvCAOJzDjwBMk7oaDD7MyE3rjL/mXpC0FBYfKBfQYcku7g9Qk?=
- =?iso-8859-1?Q?EDq2Ch855XAjQ/o49xq27mtNGQG//vTuUAkGmbFhOpCHGzTsoB63dgoid/?=
- =?iso-8859-1?Q?yzxwyOlTljNOHFMsR3if/tpIipE4o+yqtWBiJB+s7yx8o1lusWeao4jzb5?=
- =?iso-8859-1?Q?wJI6RAdoFCDxgsR6kMstst2RUAKvzMWeqSYjPmO3XgCaVyI2ptfV8MqP2X?=
- =?iso-8859-1?Q?WqQPZXNvXCN9FAHv2FJfSoPJFjUqmCkkN2ysyzWz2dbqUHdOGlsl4/AJhz?=
- =?iso-8859-1?Q?RysQKG7LDy0Aw4h8A+Zi7/MIE7i8EJuZ3QuRSZgw26+p2Lg01oQfvfyhx/?=
- =?iso-8859-1?Q?n91dY6mAIdY2S66u19vexotT1/JHVwuQxd27KphfByZENDV7RYpx7FRafE?=
- =?iso-8859-1?Q?Hps+zlS785TGEU/fkL3QXHj2iXwTFKaA+8isSxMryPT0zTUK2AFdXdyyRY?=
- =?iso-8859-1?Q?fQT2D501hkDqj56tAEF1r5F99Au1v2Vytb9XLqDpWdjmsfSKVpwQuWpFi5?=
- =?iso-8859-1?Q?ZpGHO2IbmqBoz075Um9gyfsuJth0o4qpv5p3Kb4kCJCYAizrRT6dvYobva?=
- =?iso-8859-1?Q?b9kUEeLz4ke0ZcW73Sqmcn+/C7PnpR/9BYgZlVhcl38STu+ADOgFxq174N?=
- =?iso-8859-1?Q?wIGZZM8vx2i9Z6+I79cWFTePNBbbIkM/o7cITIGx+aJnuPVxweBRJVBzLb?=
- =?iso-8859-1?Q?vD6RIGKZwETi9LyF+rO/XMOP/uKoFNOPloy6boxWHyxa8L5Ew9drjNE0b6?=
- =?iso-8859-1?Q?brQDv+smaC4CQkGqu/9vZm17V5LLUAomQAcDtXcSIYuJzkKTFQZ5vMch2v?=
- =?iso-8859-1?Q?SJnYQ6iNOeeELUgY8l6tta1ZsjE7P3evUsbflUY5nLx84fSHiwIgS6M/ri?=
- =?iso-8859-1?Q?osM0g5pLVtTAYWfptIEUK3yFmVYxT9H7m9E2LJP+1T2RawtRYgu0+ApJ6y?=
- =?iso-8859-1?Q?cTBUv+LpK0Oem70HuBU/FrJo+9KSRm2XCsw3u5/UoKbiBrnxB9Vvzz+ycB?=
- =?iso-8859-1?Q?lMHLlfHvB3xSt1I0aByacvBLVjGFtZl1cM39Il2dOTWQZKPmyrpkO8IG0l?=
- =?iso-8859-1?Q?LdqnL6QvSL91B+4ZIOpS8p4x+4Glctu/yavejeN0JzHSnyuN13FiMtIw+i?=
- =?iso-8859-1?Q?fuUn+FH0Pc?=
+	=?iso-8859-1?Q?V5Zblh1sZFLpL3MbQ5d10/J7vNFBdOTkrTz+hwRf9gb5btB8U6mDBUJID7?=
+ =?iso-8859-1?Q?6d+o8eJI7AYcwpbbYgtCa2UIoKY1VeH3C44+Ay5tmoCjeMPTIt4nPK2WnB?=
+ =?iso-8859-1?Q?2ZLv/Nz5F3c7xE6WJSLgZw+v1462DxSXU2v+0E/4BMb66s9FmdhJ+FbSpO?=
+ =?iso-8859-1?Q?aom1leVKOR+AKUrFBWMH+R6BmawoPDS7fu3QIcjAzlAOajw86ojnXJYeJg?=
+ =?iso-8859-1?Q?Y8HlH1YmuPxRE57I7kiIM5kuUj5kZeTqBYIsJcjkaxo9eD6LQM1TEowQv8?=
+ =?iso-8859-1?Q?J3xobtyGYihCSXiBiLiJDLWix0KkunPyxJgNbXzzvQ62Fyq18p4MHc0mbn?=
+ =?iso-8859-1?Q?TjQqow2zbdN/ifo9I+EZGESJn7vuiLJ1kNaE6s1QvHREaLlgcetzInGZlz?=
+ =?iso-8859-1?Q?UT0vrwE2RWbGneC15WEhDtUopiPKSgfNLs1MHWwhoqdGeq3vNLMtywHi9/?=
+ =?iso-8859-1?Q?BeFYjxZI5OQeOIAryqmawlcAHbC2dcb0JMkzWt5+fQsRmCTjduPxKZfvGk?=
+ =?iso-8859-1?Q?p/4U7P5ef10SejrSMQhmCkpMSHhSQFiubQn5ivBxgkDYnxgtGtbBQ8GogZ?=
+ =?iso-8859-1?Q?c/E1ky5C7xjx+jIktOPfKQqBaXpH6uyAI3Tgv7Z//TGUEhAUYRipKheUFx?=
+ =?iso-8859-1?Q?92kZ9aiH2BkZWJkK+FI/lMgKmEOYX+hfE1kb9dlbLCEOg+6qL/UQjEcHhQ?=
+ =?iso-8859-1?Q?A2ZeyK5a5MvWWb6CzEJAb2t5jWPfPUebslS5vkV4gdPgs3Aoc6FMlVunRB?=
+ =?iso-8859-1?Q?LinR6QyuR/3A9BhTC+v7XJSfQ2K/ZLcz8ICf8KOb8/ylW6H9j8k6zTYhie?=
+ =?iso-8859-1?Q?IhJq/ef3N8Ui0RLVqL/HT8x4JhwV0HfhQuOVMhHi4WQ7u9OhatY7A1H3Vp?=
+ =?iso-8859-1?Q?d1+KXdsxB6UsdgqT+2bmnwfeeCREQw+1UbYjaUII0uUiMYD5lry7ocjshU?=
+ =?iso-8859-1?Q?njtF50vL9IL/F2UY11/DSSJ7azl7lsoWmge1Itthg6EmVsmlkAVvTMOSTg?=
+ =?iso-8859-1?Q?YCt43KPDesk2BEqM8H98UQUCzdWOWQEB4gSaRHktZ21G6uOqa+8fD32blB?=
+ =?iso-8859-1?Q?NdVP94Zr5z/e5GDgXNJ08dCKD6s+qIEhPPKj2aLAjBO+2c/bD1ou0NetC7?=
+ =?iso-8859-1?Q?ZC2x+e4Tn3Hb0GUiRCuo2tamn7YCFAc+QEZ2TOPUggqp5cwt/zSM/QGwkQ?=
+ =?iso-8859-1?Q?q35VT393LxLQ26PtBo5W1M2AfRxgHmVDC7N+5+i81D6N3aNZLk1lo4cPMh?=
+ =?iso-8859-1?Q?K0XvSA8NxuaAfznWFZ/ppWMrpRxvr1jth42p3OhcwB8Li5dObuUGpgSxhl?=
+ =?iso-8859-1?Q?gYQxHJp5jWMYhBLYHvZT9efxR40dPYcY5XFvTwMxsMlEi/fTd0l1U5qLHe?=
+ =?iso-8859-1?Q?W6okbslu3e?=
 Content-Type: multipart/mixed;
 	boundary="_004_LO3P265MB19138E6E87310C668E8A9B01851F2LO3P265MB1913GBRP_"
 MIME-Version: 1.0
@@ -111,9 +112,8 @@ Content-Type: multipart/alternative;
 Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-Some people who received this message don't often get email from c.toolan@p=
-gr.reading.ac.uk. Learn why this is important<https://aka.ms/LearnAboutSend=
-erIdentification>
+You don't often get email from c.toolan@pgr.reading.ac.uk. Learn why this i=
+s important<https://aka.ms/LearnAboutSenderIdentification>
 Welcome one and all to a drizzly Friday.
 A second welcome to your weekly Sappo email*.
 
@@ -157,7 +157,7 @@ http://maillists.reading.ac.uk/scripts/wa-READING.exe?SUBED1=3DMET-SOCIAL&A=
 
 --_000_LO3P265MB19138E6E87310C668E8A9B01851F2LO3P265MB1913GBRP_
 Content-Type: text/html; charset="iso-8859-1"
-Content-ID: <028697B865C124439E79439366F25F1E@GBRP265.PROD.OUTLOOK.COM>
+Content-ID: <289FE1A94853834A84DDB5E819C4DDA9@GBRP265.PROD.OUTLOOK.COM>
 Content-Transfer-Encoding: quoted-printable
 
 <html>
@@ -182,10 +182,9 @@ gn:middle">
 EA;padding:7px 5px 7px 15px;font-family:wf_segoe-ui_normal,Segoe UI,Segoe W=
 P,Tahoma,Arial, sans-serif;font-size:12px;font-weight:normal;color:#212121;=
 text-align:left;word-wrap:break-word;">
-<div>Some people who received this message don't often get email from c.too=
-lan@pgr.reading.ac.uk.
-<a href=3D"https://aka.ms/LearnAboutSenderIdentification">Learn why this is=
- important</a></div>
+<div>You don't often get email from c.toolan@pgr.reading.ac.uk. <a href=3D"=
+https://aka.ms/LearnAboutSenderIdentification">
+Learn why this is important</a></div>
 </td>
 <td valign=3D"middle" align=3D"left" width=3D"75px" bgcolor=3D"#EAEAEA" cel=
 lpadding=3D"7px 5px 7px 5px" color=3D"#212121" style=3D"width:75px;backgrou=
@@ -335,8 +334,8 @@ Content-Type: image/png; name="sappo-03-05-24-min.PNG"
 Content-Description: sappo-03-05-24-min.PNG
 Content-Disposition: attachment; filename="sappo-03-05-24-min.PNG";
 	size=335675; creation-date="Fri, 03 May 2024 14:47:36 GMT";
-	modification-date="Mon, 06 May 2024 09:52:36 GMT"
-Content-ID: <0CB7475BD29A1A4095C95DEF9B08E942@GBRP265.PROD.OUTLOOK.COM>
+	modification-date="Tue, 01 Oct 2024 15:37:42 GMT"
+Content-ID: <2C1C620E1D5C0F4492FA79B3FCC80368@GBRP265.PROD.OUTLOOK.COM>
 Content-Transfer-Encoding: base64
 
 iVBORw0KGgoAAAANSUhEUgAAAjYAAAKNCAMAAAAEZdGxAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC

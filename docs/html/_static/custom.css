@@ -1,5 +1,0 @@
-/* Custom CSS to adjust logo size */
-.navbar-brand img {
-    height: 56px;  /* Adjust this value as needed */
-    width: auto;   /* This maintains the aspect ratio */
-}

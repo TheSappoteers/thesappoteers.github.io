@@ -1,27 +1,28 @@
-Received: from CWXP265MB2679.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:ae::9) by
- CWLP265MB2628.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 24 May 2024 14:39:40
- +0000
+Received: from CWLP265MB2881.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:cb::12)
+ by CWLP265MB4347.GBRP265.PROD.OUTLOOK.COM with HTTPS; Fri, 24 May 2024
+ 14:39:21 +0000
 ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
- b=Xa4tki9THFP67pjiBylkpcE0etV1gARtYNJYT7mNDC8rWifkN2EXXb0n50wxkBjwtTEdMq0VDF4c+CMc3jg5a1jCA+RecfeMmx5UPF0KM67WOjWkgnZKguDoPCRz1rYcWpNaAIiUTIeMVFzjy5nP+rDlsTwdFnERMZpJsrwq93EtfkmJj8WR0r4cPomtPI0KVvMGqCiF4w0kzdICuaeBzntrneC61jJOv3emHBEi1Y4Wbf24RKwe98gTniTXLLT91gmHkXy67icNV3JN2RLRQDHXbtK4uKDOGJj/4Q15ZpI0UK6H2yGsoq0Fp7exjhqCW+Hn4qXR+27PAc+Yi0UP6w==
+ b=SgrhYKuQTQo2Bvzc5XY57z6huLQ5tFzmz/nzii0deAVnb4YncrDq7c8NIoMjLF8PlKKcpXDZPKVU62aCtyuhvvQg9vF63+jxBptI8CGcyxCGCQa+u1gx0V0X8pgPl4OeSh5+ntEY+Utw01U4n58LoBZbAtm2hx/V1bF+0Ihh8s4n+u6ndBnLFGZvFL1PXrJckvG/jMw2gkS+3vFCx6Hmr4/Xip6af2DnnREOpw2u91ZeyEL/Wc9xgudMVBhzppDW+WyB23VO6ka5fMCUB7O0/js1brlxBftNr70knxUdH6mlQh8oZ6bE9loSDj9pQ6eWjXYSymsxoHFVNQAdo5931w==
 ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
  bh=tMSv4MrDU6NhVAQs5ves954MxinTQs0DkJNXJ5Ln0L8=;
  b=b/ka/nke670ezdYqc21GS6eS+0eZcKovFF8KcnCIrpjJjvsSoiTiy1LjU0HSnhBpvYw1p8eo0hb9sMjkSxQaNxHQhq2m8dUgvufRh37Kw/0D+8awlDafmSiftqdUbXJWa5QKxdj6KO4IFnvKBDD4j/70QFZk1k8wx1jD1/uw6GO5+uTS+o6TERGOl3/vYUrnvRrcQWndWxLY2JosNYpr+b+t8G6AJTImsDHWq+g12NzoeGT38msYf2AUs7xnmcBgBZxSV+DtGcd/UDnfsHFECwXF93zg2zdjd4B4JuauDuuX1yv1knsBAPQR2OpOWB6wet0BjlPhyo14s8umuGQIMQ==
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
- 52.156.253.32) smtp.rcpttodomain=pgr.reading.ac.uk
+ 52.156.253.32) smtp.rcpttodomain=student.reading.ac.uk
  smtp.mailfrom=maillists.reading.ac.uk; dmarc=pass (p=none sp=none pct=100)
  action=none header.from=pgr.reading.ac.uk; dkim=pass (signature was verified)
  header.d=maillists.reading.ac.uk; arc=fail (47)
-Received: from DU2P251CA0006.EURP251.PROD.OUTLOOK.COM (2603:10a6:10:230::7) by
- CWXP265MB2679.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:ae::9) with Microsoft
- SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.7611.22; Fri, 24 May 2024 14:39:37 +0000
-Received: from DB1PEPF000509FC.eurprd03.prod.outlook.com
- (2603:10a6:10:230:cafe::84) by DU2P251CA0006.outlook.office365.com
- (2603:10a6:10:230::7) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7611.22 via Frontend
- Transport; Fri, 24 May 2024 14:39:37 +0000
+Received: from DU2PR04CA0285.eurprd04.prod.outlook.com (2603:10a6:10:28c::20)
+ by CWLP265MB2881.GBRP265.PROD.OUTLOOK.COM (2603:10a6:400:cb::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7611.22; Fri, 24 May
+ 2024 14:39:19 +0000
+Received: from DU2PEPF0001E9C0.eurprd03.prod.outlook.com
+ (2603:10a6:10:28c:cafe::c6) by DU2PR04CA0285.outlook.office365.com
+ (2603:10a6:10:28c::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7611.19 via Frontend
+ Transport; Fri, 24 May 2024 14:39:19 +0000
 Authentication-Results: spf=pass (sender IP is 52.156.253.32)
  smtp.mailfrom=MAILLISTS.READING.AC.UK; dkim=pass (signature was verified)
  header.d=MAILLISTS.READING.AC.UK;dmarc=pass action=none
@@ -31,12 +32,12 @@ Received-SPF: Pass (protection.outlook.com: domain of MAILLISTS.READING.AC.UK
  receiver=protection.outlook.com; client-ip=52.156.253.32;
  helo=sirius.ease.lsoft.se; pr=C
 Received: from sirius.ease.lsoft.se (52.156.253.32) by
- DB1PEPF000509FC.mail.protection.outlook.com (10.167.242.38) with Microsoft
- SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7611.14
- via Frontend Transport; Fri, 24 May 2024 14:39:37 +0000
+ DU2PEPF0001E9C0.mail.protection.outlook.com (10.167.8.69) with Microsoft SMTP
+ Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7611.14 via
+ Frontend Transport; Fri, 24 May 2024 14:39:18 +0000
 Received: from CASTOR (castor.ease.lsoft.se [52.156.253.36])
-	by sirius.ease.lsoft.se (Postfix) with ESMTP id 221CB2006FA8;
-	Fri, 24 May 2024 14:39:37 +0000 (UTC)
+	by sirius.ease.lsoft.se (Postfix) with ESMTP id 30C7D200E8CF;
+	Fri, 24 May 2024 14:39:18 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; d=MAILLISTS.READING.AC.UK; s=DEFAULT; c=relaxed/relaxed; bh=tMSv4MrDU6NhVAQs5ves954MxinTQs0DkJNXJ5Ln0L8=; i=@MAILLISTS.READING.AC.UK;
  h=Approved-By:ARC-Seal:ARC-Message-Signature:ARC-Authentication-Results:Thread-Topic:Thread-Index:Accept-Language:Content-Language:Content-Type:MIME-Version:Message-ID:Date:Reply-To:Sender:From:Subject:To:List-Help:List-Unsubscribe:List-Subscribe:List-Owner:List-Archive;
  b=WRf8eai+HRwKz372eaS4mctBPOjPeSN/jelNKre6qU0CZK64dDn6I9OOyYioAt38bh6/nFZuiuViURNbLci+UZQudQkfNm9Vc838fowzLgY5hTs2aN6KNnmC5/3sETl5nz4v3MdrJu/zdz9q/xm43OazaS76qnWsZIdqcJABcYQ=
@@ -78,8 +79,8 @@ Content-Language: en-US
 X-MS-Has-Attach: yes
 X-MS-TNEF-Correlator:
 x-ms-traffictypediagnostic:
- LO6P265MB6719:EE_|CWXP265MB2934:EE_|DB1PEPF000509FC:EE_|CWXP265MB2679:EE_|CWLP265MB2628:EE_
-X-MS-Office365-Filtering-Correlation-Id: 5da30181-64a9-4790-75fc-08dc7bff562d
+ LO6P265MB6719:EE_|CWXP265MB2934:EE_|DU2PEPF0001E9C0:EE_|CWLP265MB2881:EE_|CWLP265MB4347:EE_
+X-MS-Office365-Filtering-Correlation-Id: 6ad0a52f-92e0-4647-c8b3-08dc7bff4b1b
 x-ms-exchange-senderadcheck: 1
 x-ms-exchange-antispam-relay: 0
 X-Microsoft-Antispam-Untrusted:
@@ -126,68 +127,66 @@ List-Subscribe: <mailto:MET-SOCIAL-subscribe-request@MAILLISTS.READING.AC.UK>
 List-Owner: <mailto:MET-SOCIAL-request@MAILLISTS.READING.AC.UK>
 List-Archive: <http://maillists.reading.ac.uk/scripts/wa-READING.exe?LIST=MET-SOCIAL>
 Return-Path: owner-met-social@MAILLISTS.READING.AC.UK
-X-MS-Exchange-Organization-ExpirationStartTime: 24 May 2024 14:39:37.2464
+X-MS-Exchange-Organization-ExpirationStartTime: 24 May 2024 14:39:18.6756
  (UTC)
 X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
 X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
 X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
 X-MS-Exchange-Organization-Network-Message-Id:
- 5da30181-64a9-4790-75fc-08dc7bff562d
+ 6ad0a52f-92e0-4647-c8b3-08dc7bff4b1b
 X-EOPAttributedMessage: 0
 X-EOPTenantAttributedMessage: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f:0
 X-MS-Exchange-Organization-MessageDirectionality: Incoming
 X-MS-Exchange-Transport-CrossTenantHeadersStripped:
- DB1PEPF000509FC.eurprd03.prod.outlook.com
+ DU2PEPF0001E9C0.eurprd03.prod.outlook.com
 X-MS-PublicTrafficType: Email
 X-MS-Exchange-Organization-AuthSource:
- DB1PEPF000509FC.eurprd03.prod.outlook.com
+ DU2PEPF0001E9C0.eurprd03.prod.outlook.com
 X-MS-Exchange-Organization-AuthAs: Anonymous
 X-MS-Office365-Filtering-Correlation-Id-Prvs:
  a6254bd5-6b1d-4a54-030e-08dc7bfd13e9
-X-LD-Processed: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f,ExtFwd
 X-MS-Exchange-AtpMessageProperties: SA|SL
 X-MS-Exchange-Organization-SCL: 1
 X-Microsoft-Antispam: BCL:0;ARA:13230031|35042699013;
 X-Forefront-Antispam-Report:
  CIP:52.156.253.32;CTRY:IE;LANG:;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:sirius.ease.lsoft.se;PTR:sirius.ease.lsoft.se;CAT:NONE;SFTY:9.25;SFS:(13230031)(35042699013);DIR:INB;SFTY:9.25;
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 May 2024 14:39:37.1995
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 May 2024 14:39:18.3631
  (UTC)
-X-MS-Exchange-CrossTenant-Network-Message-Id: 5da30181-64a9-4790-75fc-08dc7bff562d
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6ad0a52f-92e0-4647-c8b3-08dc7bff4b1b
 X-MS-Exchange-CrossTenant-Id: 4ffa3bc4-ecfc-48c0-9080-f5e43ff90e5f
-X-MS-Exchange-CrossTenant-AuthSource:
- DB1PEPF000509FC.eurprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthSource: DU2PEPF0001E9C0.eurprd03.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Anonymous
 X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWXP265MB2679
-X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8429199
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CWLP265MB2881
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5118066
 X-MS-Exchange-Processed-By-BccFoldering: 15.20.7611.013
 X-Microsoft-Antispam-Mailbox-Delivery:
 	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?Windows-1252?Q?PIy3CpovlkfDtax5pur4qP0sxZoUSPNHauP8v38YcjriBs0Jyn1bnifA?=
- =?Windows-1252?Q?YtYEmDPVs5gJC69MvjWu3qGawjgjR1vY2hznvtMJ+a6PnYWKiPXFip3R?=
- =?Windows-1252?Q?TdfGqa1SvKA+r6hMDYd8su0bH1g1oU9vSKw5C4ujfbKUticICMjRZwB9?=
- =?Windows-1252?Q?AAzFaZL0LVmQULs8XgObwqxapkwc2xMPZ4AZ9L4THaHxhbqRjiq2aRwm?=
- =?Windows-1252?Q?cTPVTP7PsrYGLhxp2OQHfrhwz4mhzAiCxvNviKr5//L3fE+d9SaccOQ6?=
- =?Windows-1252?Q?ol2Ub9ngugwY16iZo9709H+sahEmUgEjXrcB9rfz7oV5HYh8vxXvkeC9?=
- =?Windows-1252?Q?qJU6gCr4XlQHCShp8vNL5ZRIMnUSK/+k0DdbmqN9Op/EN2y6pMi24ltn?=
- =?Windows-1252?Q?LcrIXWZtNCQ5y2XVI1TMguEhY72MGwloE7wB1dnmMNH9X41yNVj6ZI/n?=
- =?Windows-1252?Q?66DYc+wsdVhHM6WMkcQl3TFE+4HHEhadWboVca94mnYk1YZBDWwbU7uh?=
- =?Windows-1252?Q?uLldbDgjTu1r0zhB69TEFJoYcK/Dc8i9nBnu0HiVBVesGpWbwWfrdAQ5?=
- =?Windows-1252?Q?TbFyYln75p7R9R8Z3zLkTZ2ToMBv9zHAORh4tHq+IPo23l1PbmHMhRVO?=
- =?Windows-1252?Q?HsVeR7Vzqr7VhysxfQXUN7EQuGC5Xar6AVM2Ieuqnu5CFRbwZ4lKPe5x?=
- =?Windows-1252?Q?beZ0GXviglh4336wd1sM6TxKqq12hbeGNQMkMKhlHp3GLWRqhmhPQAPw?=
- =?Windows-1252?Q?Xc1XzBmS/4I5/dVA4lf5dYy8XsYtkaVnUqyM5tizKNkXyhUBDCFGZgwL?=
- =?Windows-1252?Q?sNOxq54melMzJhOJXgxXVHHqBBIL9g9Ui01hhdNgDxYMcxYeJ/goEv5R?=
- =?Windows-1252?Q?3IOEo5dsxRNAZ+LuXzmLR9DCQ3Kibx1qe0NV96dfFInx7rlkjjIuIPl4?=
- =?Windows-1252?Q?/JyoAWkZL49KTVWLwe2tLYsgvEUi1GxVtNtcMR5wlg2KtFJ3E+8/gkUW?=
- =?Windows-1252?Q?xRSddevArs4mJqUTaRSEIxBdPmbMZPRCTGaotq2Tt3arX64PD19qWYaH?=
- =?Windows-1252?Q?1IQMIngC7oI24TUItJTZqeexiyIinTaG4VfdkZlX6/b6lgNNJpVN7erW?=
- =?Windows-1252?Q?k5zaHzG07gSNrKR461A/6PZTlTW3QhM4ZL4NBr0oo1LMCCnd9QC43DK0?=
- =?Windows-1252?Q?MX40HvQV6hwvpd1F1wyLXtgvnEPcRwmNF3sDmF5Xe4ylEg0c1wsQa+ud?=
- =?Windows-1252?Q?/mjucQedW6DIP/dLoRj7iRILK4vNQPPceQR7evfzHZ2/0PYx0qTOqkf+?=
- =?Windows-1252?Q?GzVh4q8tGhflXLuOzoklr+u40AD0jtE4po6uKgW7Rp1iktA7ydmaRD76?=
- =?Windows-1252?Q?3ySzljozIdk0Fg=3D=3D?=
+	=?Windows-1252?Q?D8oLLsfBoNvfrUeJSi16Zngo9PF4/kpIjp8bQX0IIKa2F1GaC2GJ6luA?=
+ =?Windows-1252?Q?KC/YvxgY4WrOkBD7fvwIhu8XdCg4IB3uzH1BjoRZ5z/9xfumL+yk5bhl?=
+ =?Windows-1252?Q?ChfE991f/l4kBRM5RcyLRXFMnIbh9yTjgENckDZ9ZO1aIG97yRXgbqen?=
+ =?Windows-1252?Q?qTaJnt+/4r08KPFCTyZEubZ+yWvs7A7F60b9Jqd0OLQpZeZJFFEfFra/?=
+ =?Windows-1252?Q?dkmYMXSA5Dy+LOeKbvA67h2PjWQOoZHUKQaKh6g2HladoePrEaf4eEf6?=
+ =?Windows-1252?Q?mkx8BnM24DVYr01/Lk3L9c3URmnivggGrUvWE9HrO4C4sEtWf5aB6riJ?=
+ =?Windows-1252?Q?BBcflJUucQzM4JqSA38A7N+KEpUYxwUeejAJh1qz6hIkbYsOz1YARGd0?=
+ =?Windows-1252?Q?nPd/2dP1CJHGt7RGtFxR4xhJiNtGDxdiEt1aoFn5m6ca+gcNxk3K3INu?=
+ =?Windows-1252?Q?3YhNKdxH84UZOr2vtwNGy4/FijnLbLP+l5bNvLGFF9Cs8/jb7+uyI5pW?=
+ =?Windows-1252?Q?ghJiVr1/mA32gA6qchumZVJiDCrenHhNAZjAxReHJAHA0IYaGajF1jrM?=
+ =?Windows-1252?Q?Re7ZTACPWlCk8TXxyVIhuHzCBLqmI3Mw0TSdmnwBQ7RpEIV6DKtC9LvS?=
+ =?Windows-1252?Q?wimS2CBbGbLAqGuXbLAsfHS9FzY+X8SonnJsGccVRDGr3ihbrcq/QDJL?=
+ =?Windows-1252?Q?YjRTue2r2ko2Pumy9Ld90J1hifvK+jnTWNKBsXWHgTfOFXW4rE+UOCMj?=
+ =?Windows-1252?Q?P/l9vy7rm07MaI+53IY9cGFRJz9Fs2yVYqdSmE+1NjS6kACeSunjzOWy?=
+ =?Windows-1252?Q?MI8j2J69kasC/8SmXJp3rXPzBJHLQjq5TkRiCS7rPazSvLPMcaCAk4Xs?=
+ =?Windows-1252?Q?TjNNmPzyMk5kEi4KyIVlS/I37mqE4dJxgm3lg6rCEVvF9xhg3uQY7Trh?=
+ =?Windows-1252?Q?SIVBrXWUIJScXtIF68qVPsKqmjTYLg6Ha/5IszrhYT0H8mOtfYLIonnQ?=
+ =?Windows-1252?Q?d8/8g/XIUXCUw/qI/jBQ5/cgYxePeoptieXWmm0stoqaqbZOruXNbiRh?=
+ =?Windows-1252?Q?O4CBqhSpwkNsKQI/621LJeQjG1h+ZlPb3pUywXVQ5Q9rF5FmnfqszvUE?=
+ =?Windows-1252?Q?jhx8Q07h9H3gMxhQrG+KjUhBuAPOSCZgwxWh6muXMLbBs1QdIpdSU70f?=
+ =?Windows-1252?Q?S+LyQZ/67iD41++tsrDs+Z/abbq/i7WEsPu/WGZcT0yedw+tQOuU/PtN?=
+ =?Windows-1252?Q?5rn0D9/z4G5kig7JfFs4HpoqDklup1SFSPmAZ7OaNVYQn+Gw0FXtl67b?=
+ =?Windows-1252?Q?RYVLTkyt6qhxqjfyJmGZNpyY1clluSBMx0xo16RNQ84Rul9kOqM3FiRd?=
+ =?Windows-1252?Q?0EBXhGeVwxlWkQ=3D=3D?=
 MIME-Version: 1.0
 
 --_004_LO6P265MB671999AB65FD1DA93FB262A987F52LO6P265MB6719GBRP_
@@ -198,9 +197,8 @@ Content-Type: multipart/alternative;
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-Some people who received this message don't often get email from m.e.r.seab=
-rook@pgr.reading.ac.uk. Learn why this is important<https://aka.ms/LearnAbo=
-utSenderIdentification>
+You don't often get email from m.e.r.seabrook@pgr.reading.ac.uk. Learn why =
+this is important<https://aka.ms/LearnAboutSenderIdentification>
 Hello sappo friends,
 A moment of silence and a toast for the passing of Kabosu<https://www.coind=
 esk.com/business/2024/05/24/kabosu-dog-who-inspired-dogecoin-and-shiba-inu-=
@@ -305,10 +303,9 @@ gn:middle">
 EA;padding:7px 5px 7px 15px;font-family:wf_segoe-ui_normal,Segoe UI,Segoe W=
 P,Tahoma,Arial, sans-serif;font-size:12px;font-weight:normal;color:#212121;=
 text-align:left;word-wrap:break-word;">
-<div>Some people who received this message don't often get email from m.e.r=
-.seabrook@pgr.reading.ac.uk.
-<a href=3D"https://aka.ms/LearnAboutSenderIdentification">Learn why this is=
- important</a></div>
+<div>You don't often get email from m.e.r.seabrook@pgr.reading.ac.uk. <a hr=
+ef=3D"https://aka.ms/LearnAboutSenderIdentification">
+Learn why this is important</a></div>
 </td>
 <td valign=3D"middle" align=3D"left" width=3D"75px" bgcolor=3D"#EAEAEA" cel=
 lpadding=3D"7px 5px 7px 5px" color=3D"#212121" style=3D"width:75px;backgrou=

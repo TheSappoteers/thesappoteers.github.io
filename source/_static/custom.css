@@ -3,3 +3,111 @@
     height: 56px;  /* Adjust this value as needed */
     width: auto;   /* This maintains the aspect ratio */
 }
+
+/* Timeline container styles */
+#timeline-container {
+    margin-top: 20px;
+}
+
+/* Timeline filter styles */
+#timeline-filters {
+    margin-bottom: 10px;
+}
+
+#timeline-filters select {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: var(--pst-color-background);
+    color: var(--pst-color-text-base);
+    border: 1px solid var(--pst-color-border);
+}
+
+/* Email header styles */
+.email-header {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--pst-color-border);
+}
+
+.email-subject {
+    color: var(--pst-color-text-base);
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.email-sender, .email-date {
+    color: var(--pst-color-text-muted);
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.email-body {
+    padding-top: 10px;
+}
+
+/* Improve readability of email content */
+#email-detail {
+    font-family: var(--pst-font-family-base);
+    line-height: 1.6;
+    background-color: var(--pst-color-background);
+    color: var(--pst-color-text-base);
+    border-color: var(--pst-color-border);
+}
+
+/* Style for the flyer image */
+#email-flyer {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border: 1px solid var(--pst-color-border);
+}
+
+/* PyData Theme Timeline Styles */
+.pydata-timeline {
+    --timeline-background: var(--pst-color-background);
+    --timeline-foreground: var(--pst-color-text-base);
+    --timeline-item-background: var(--pst-color-primary);
+    --timeline-item-foreground: var(--pst-color-on-primary);
+    --timeline-axis: var(--pst-color-border);
+}
+
+.pydata-timeline .vis-timeline {
+    border-color: var(--timeline-axis);
+}
+
+.pydata-timeline .vis-panel.vis-center,
+.pydata-timeline .vis-panel.vis-left,
+.pydata-timeline .vis-panel.vis-right {
+    border-color: var(--timeline-axis);
+}
+
+.pydata-timeline .vis-time-axis .vis-text {
+    color: var(--timeline-foreground);
+}
+
+.pydata-timeline .vis-time-axis .vis-grid.vis-minor,
+.pydata-timeline .vis-time-axis .vis-grid.vis-major {
+    border-color: var(--timeline-axis);
+}
+
+.pydata-timeline-item {
+    background-color: var(--timeline-item-background) !important;
+    color: var(--timeline-item-foreground) !important;
+    border-color: var(--timeline-item-background) !important;
+}
+
+.pydata-timeline-item.vis-selected {
+    background-color: var(--pst-color-secondary) !important;
+    border-color: var(--pst-color-secondary) !important;
+}
+
+/* Ensure good contrast for links in dark mode */
+[data-theme="dark"] .email-body a {
+    color: var(--pst-color-link);
+}
+
+[data-theme="dark"] .email-body a:hover {
+    color: var(--pst-color-link-hover);
+}
