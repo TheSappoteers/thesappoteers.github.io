@@ -67,3 +67,4 @@ Sappo Club was started by Mathew "Sappo" Sapiano who was a PhD student at the de
    photos
    leaderboard
    contact
+   contribute

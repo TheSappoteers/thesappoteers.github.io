@@ -48,6 +48,11 @@ html_theme_options = {
             "url": "https://chat.whatsapp.com/CgYkOZiabKv4fy38PAJTJp",
             "icon": "fa-brands fa-whatsapp",
         },
+        {
+            "name": "Share your ideas, suggestions and contribute on Github",
+            "url": "https://github.com/TheSappoteers/thesappoteers.github.io",
+            "icon": "fa-brands fa-github",
+        },        
     ],
 }
 
