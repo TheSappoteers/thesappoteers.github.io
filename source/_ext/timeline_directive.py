@@ -73,10 +73,10 @@ class TimelineDirective(SphinxDirective):
                 years.map(year => `<option value="${{year}}">${{year}}</option>`).join('');
             document.getElementById('timeline-filters').appendChild(yearFilter);
 
-            // Create sender filter
+            // Create sender filter with unique names
             var senderFilter = document.createElement('select');
             senderFilter.id = 'sender-filter';
-            var senders = Array.from(new Set(items.get().map(item => item.group))).sort();
+            var senders = Array.from(new Set(items.get().map(item => item.group.split('<')[0].trim()))).sort();
             senderFilter.innerHTML = '<option value="all">All Senders</option>' +
                 senders.map(sender => `<option value="${{sender}}">${{sender}}</option>`).join('');
             document.getElementById('timeline-filters').appendChild(senderFilter);
@@ -87,7 +87,7 @@ class TimelineDirective(SphinxDirective):
                 var selectedSender = senderFilter.value;
                 var filteredItems = items.get().filter(item => 
                     (selectedYear === 'all' || item.year === selectedYear) &&
-                    (selectedSender === 'all' || item.group === selectedSender)
+                    (selectedSender === 'all' || item.group.startsWith(selectedSender))
                 );
                 timeline.setItems(new vis.DataSet(filteredItems));
             }}
