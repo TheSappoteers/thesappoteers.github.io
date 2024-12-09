@@ -14,13 +14,16 @@ FrisBeer Leaderboard
    * - Name
      - Time (seconds)
      - Drink (1.5 pints adjusted)
-   * - 🥇 Brian Lo
+   * - 🥇 Isabel Smith
+     - 70.86
+     - ?     
+   * - 🥈 Brian Lo
      - 72
      - ?
-   * - 🥈 Natalie Ratcliffe
+   * - 🥉 Natalie Ratcliffe
      - 84.23
      - ?
-   * - 🥉 Hannah Croad
+   * - Hannah Croad
      - 176
      - ?
    * - Mark Prosser
