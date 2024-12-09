@@ -17,10 +17,13 @@ FrisBeer Leaderboard
    * - 🥇 Brian Lo
      - 72
      - ?
-   * - 🥈 Hannah Croad
+   * - 🥈 Natalie Ratcliffe
+     - 84.23
+     - ?
+   * - 🥉 Hannah Croad
      - 176
      - ?
-   * - 🥉 Mark Prosser
+   * - Mark Prosser
      -  193
      - ?
    * - 🦆 Charlie Suitters
@@ -30,4 +33,4 @@ FrisBeer Leaderboard
 .. admonition:: Upcoming Viva Dates
 
    - Isabel Smith: November 8th, 2024 (AM)
-   - Natalie Ratcliffe: December 9th, 2024
+   - Natalie Ratcliffe: December 9th, 2024 (AM)
